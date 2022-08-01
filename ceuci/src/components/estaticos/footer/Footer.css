@@ -1,24 +1,31 @@
 .box1{
-    background-color: #3F51B5;
+    background-color: #5C874D;
     height: 60px;
 }
 
 .box2{
-    background-color: #303F9F;
+    background-color: #4e7240;
     height: 60px;
 }
 
-.redes{
+.instagram{
     font-size: 50px !important;
     color: white;
 }
 
-.git{
+.linkedin{
+    font-size: 50px !important;
+    color: white;
+    margin-right: 15px;
+}
+
+.github{
     font-size: 40px !important;
-    padding: 5px;
+    padding: 15px;
     color: white;
 }
 
-.textos{
-   color: white;
+.generation{
+    height: 50px !important;
+    color: white;
 }

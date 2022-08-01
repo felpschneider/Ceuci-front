@@ -1,9 +1,28 @@
+body::-webkit-scrollbar{
+    background-color: aliceblue;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: #528240;
+    border-radius: 20px;
+    border: 1px solid rgb(210, 136, 16);
+}
+
 .text-decorator-none{
     text-decoration: none;
 }
 .textos1{
     font-weight:bold !important ;
 }
+
+.bg-color{
+    background-color: #f5faf5;
+}
+
+.bg-btn{
+    background-color: #528240!important;
+}
+
 .imag{
     background-image:url("/assets/img/foto-legumeseFrutas.png") !important;
             background-repeat:no-repeat !important; 
