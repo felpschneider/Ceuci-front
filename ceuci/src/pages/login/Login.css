@@ -1,0 +1,14 @@
+.text-decorator-none{
+    text-decoration: none;
+}
+.textos1{
+    font-weight:bold !important ;
+}
+.imag{
+    background-image:url("/assets/img/foto-legumeseFrutas.png") !important;
+            background-repeat:no-repeat !important; 
+            width :100vh !important;
+            background-size:cover !important; 
+            background-position:center !important;
+            min-height: 100vh !important; 
+}
