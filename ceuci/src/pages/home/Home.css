@@ -3,16 +3,16 @@
 }
 
 .titulo{
-    color: white;
+    color: white !important;
     font-weight: bold;
 }
 
 .botao {
-    border-color: white;
+    border-color: white !important;
     background-color: #3F51B5;
-     color: white;
+     color: white!important;
 }
 
 .produtos{
-    background-color: white ;
+    background-color: white !important;
 }
