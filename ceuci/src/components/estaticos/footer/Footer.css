@@ -1,0 +1,24 @@
+.box1{
+    background-color: #3F51B5;
+    height: 60px;
+}
+
+.box2{
+    background-color: #303F9F;
+    height: 60px;
+}
+
+.redes{
+    font-size: 50px !important;
+    color: white;
+}
+
+.git{
+    font-size: 40px !important;
+    padding: 5px;
+    color: white;
+}
+
+.textos{
+   color: white;
+}
