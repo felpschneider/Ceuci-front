@@ -1,0 +1,21 @@
+.social{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    padding: 10px;
+    size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto{
+    padding: 10px;
+    size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
