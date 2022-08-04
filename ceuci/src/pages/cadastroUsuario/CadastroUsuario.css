@@ -1,0 +1,24 @@
+.img2{
+    background-image:url("https://i.imgur.com/XsG0u3T.png") !important;
+            background-repeat:no-repeat !important; 
+            width :100vh !important;
+            background-size:cover !important; 
+            background-position:center !important;
+            min-height: 100vh !important; 
+}
+.texto2{
+    font-weight: bold !important;
+ }
+ .bg-botao2{
+    margin-right: 20px !important;
+    background-color: #f18c27!important;
+}
+.bg-botao3{
+    margin-right: 20px !important;
+    background-color: #528240!important;
+}
+.cor{
+        background-color: #d9b570!important;
+        border-radius: 10px !important;
+        border: 1px solid #cea086 !important;
+}
