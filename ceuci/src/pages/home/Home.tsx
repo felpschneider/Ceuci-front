@@ -18,7 +18,7 @@ function Home() {
                     </Box>
                 </Grid>
                 <Grid item xs={6} >
-                    <img src="https://i.imgur.com/sTAoLJ7.png" alt="imagem home" width="100%" height="100%"/>
+                    <img src="https://i.imgur.com/3CDnfTg.png" alt="imagem home" width="100%" height="100%"/>
                 </Grid>
                 <Grid xs={12} className='produtos'>
                 </Grid>

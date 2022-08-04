@@ -50,7 +50,7 @@ function Footer() {
               </a>
             </Box>
           </Box>
-          <Box className="box2">
+           <Box className="box2">
             <Box paddingTop={1}>
               <Typography
                 variant="subtitle2"
@@ -60,8 +60,8 @@ function Footer() {
               >
               Ceuci© 2022 Copyright:
               </Typography>
-            </Box>
-            <Box>
+            </Box> 
+            {/* <Box>
               <a
                 target="_blank"
                 href="https://brasil.generation.org"
@@ -76,8 +76,8 @@ function Footer() {
                   brasil.generation.org
                 </Typography>
               </a>
-            </Box>
-          </Box>
+            </Box> */}
+          </Box> 
         </Grid>
       </Grid>
     </>

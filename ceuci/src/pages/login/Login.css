@@ -6,7 +6,7 @@
  /* Firefox */
  * {
     scrollbar-width: auto;
-    scrollbar-color: var(--cor-principal) var(--cor-branca);
+    scrollbar-color:#528240 var(--cor-branca);
   }
 
   /* Chrome, Edge, and Safari */
@@ -19,14 +19,16 @@
   }
 
   *::-webkit-scrollbar-thumb {
-    background-color: var(--cor-principal);
+    background-color: #528240;
     border-radius: 10px;
-    border: 2px solid var(--cor-branca);
+    border: 1px solid var(--cor-branca);
   }
 
 body::-webkit-scrollbar{
     background-color: var(--cor-branca);
 }
+
+
 
 .text-decorator-none{
     text-decoration: none;
@@ -44,7 +46,7 @@ body::-webkit-scrollbar{
 }
 
 .imag{
-    background-image:url("/assets/img/foto-legumeseFrutas.png") !important;
+    background-image:url("https://i.imgur.com/3CDnfTg.png") !important;
             background-repeat:no-repeat !important; 
             width :100vh !important;
             background-size:cover !important; 

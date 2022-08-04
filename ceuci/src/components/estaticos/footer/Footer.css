@@ -1,11 +1,11 @@
 .box1{
-    background-color: var(--cor-principal);
+    background: linear-gradient(36deg, #528240 0%, #bdce66 30%, #a5b452 84%);
     height: 60px;
 }
 
 .box2{
-    background-color: #4e7240;
-    height: 60px;
+    background: linear-gradient(130deg, #528240 0%, #bdce66 30%, #a5b452 84%);
+    height: 40px;
 }
 
 .instagram{

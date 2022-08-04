@@ -1,5 +1,5 @@
 .menu-color{
-    background-color: var(--cor-principal);
+    background: linear-gradient(36deg, rgba(82,130,64,1) 0%, rgba(189,206,102,1) 39%, rgba(165,180,82,1) 84%);
 }
 
 .cursor{
