@@ -1,9 +1,9 @@
 .caixa {
-    background-color: #528240
+    background-color: #f5faf5;
 }
 
 .titulo{
-    color: white !important;
+    color: #528240 !important;
     font-weight: bold;
 }
 

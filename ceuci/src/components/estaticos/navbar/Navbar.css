@@ -1,12 +1,12 @@
-/* menu-color #76881c */
+
 
 .menu-color{
-    background-color: #5C874D;
+    background-color: var(--cor-principal);
 }
 
 .cursor{
     cursor: pointer;
-    color: white;
+    color: var(--cor-branca);
 }
 
 .text-decorator-none{

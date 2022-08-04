@@ -1,5 +1,5 @@
 .box1{
-    background-color: #5C874D;
+    background-color: var(--cor-principal);
     height: 60px;
 }
 
@@ -10,22 +10,22 @@
 
 .instagram{
     font-size: 50px !important;
-    color: white;
+    color: var(--cor-branca);
 }
 
 .linkedin{
     font-size: 50px !important;
-    color: white;
+    color: var(--cor-branca);
     margin-right: 15px;
 }
 
 .github{
     font-size: 40px !important;
     padding: 15px;
-    color: white;
+    color: var(--cor-branca);
 }
 
 .generation{
     height: 50px !important;
-    color: white;
+    color: var(--cor-branca);
 }
