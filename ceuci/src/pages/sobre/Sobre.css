@@ -1,20 +1,63 @@
+.sobre-caixa {
+    background-color: #f5faf5;
+}
+
 .social{
+    padding: 20px;
     display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.social-icon{
+    padding: 10px;
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+}
+
+.sobre-titulo{
+    display: flex;
+    padding: 20px;
+    size: 50px;
+    justify-content: center;
+    align-items: center;
+    color: #528240 !important;
+    font-weight: bold;
+}
+
+.sobre-texto{
+    padding: 20px;
+    display: flex;
+    size: 35px;
     justify-content: center;
     align-items: center;
 }
 
-.titulo{
-    padding: 10px;
-    size: 40px;
+.sobre-fotos{
     display: flex;
-    justify-content: center;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    padding: 10px;
+}
+
+.sobre{
+    display: flex;
+    justify-content: space-evenly;
     align-items: center;
 }
 
-.texto{
-    padding: 10px;
-    size: 20px;
+.sobre-imagem{
+    display: flex;
+    height: 500px;
+    width: 500px;
+    padding: 20px;
+}
+
+.sobre-nome{
+    color: #528240 !important;
+    size: 30px !important;
     display: flex;
     justify-content: center;
     align-items: center;
