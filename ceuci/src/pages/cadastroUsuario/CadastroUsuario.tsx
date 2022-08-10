@@ -53,7 +53,7 @@ function CadastroUsuario() {
       
       if (confirmarSenha === user.senha && user.senha.length >= 8) {
 
-          
+        
         try {
           await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult)
           alert("Usuário cadastrado com sucesso")
