@@ -7,6 +7,9 @@ import Sobre from "./pages/sobre/Sobre";
 import Home from "./pages/home/Home";
 import CadastroUsuario from "./pages/cadastroUsuario/CadastroUsuario";
 import Login from "./pages/login/Login";
+import ListaCategoria from "./components/categoria/listacategoria/ListaCategoria";
+import DeletarCategoria from "./components/categoria/deletarCategoria/DeletarCategoria";
+import CadastroCategoria from "./components/categoria/cadastroCategoria/CadastroCategoria";
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
           <Route path="/cadastrousuario" element={<CadastroUsuario />} />
           <Route path="/sobre" element={<Sobre />} />
           <Route path="/produtos" element={<Home />} />
+          <Route path="/categorias" element={<ListaCategoria />} />
+          <Route path="/deletarCategorias/:id" element={<DeletarCategoria />} />
+          <Route path="/formularioCategorias/:id" element={<CadastroCategoria />} />
         </Routes>
       </div>
       <Footer />
