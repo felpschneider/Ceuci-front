@@ -5,7 +5,7 @@ import './DeletarCategoria.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
-import Tema from '../../../models/Categoria';
+import Categoria from '../../../models/Categoria';
 
 
 function DeletarCategoria() {
