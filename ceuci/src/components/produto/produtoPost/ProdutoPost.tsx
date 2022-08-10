@@ -1,17 +1,20 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
-import './CadastroPost.css';
+import './ProdutoPost.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Categoria from '../../../models/Categoria';
-import useLocalStorage from 'react-use-localstorage';
 import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function ProdutoPost() {
     let navigate = useNavigate();
     const { id } = useParams<{ id: string }>();
     const [categorias, setCategorias] = useState<Categoria[]>([])
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+      (state) => state.tokens
+    );
 
     useEffect(() => {
         if (token == "") {
@@ -51,7 +54,7 @@ function ProdutoPost() {
     }, [id])
 
     async function getCategorias() {
-        await busca("/categoria", setCategorias, {
+        await busca("/categorias", setCategorias, {
             headers: {
                 'Authorization': token
             }
@@ -59,7 +62,7 @@ function ProdutoPost() {
     }
 
     async function findByIdProduto(id: string) {
-        await buscaId(`produto/${id}`, setProduto, {
+        await buscaId(`produtos/${id}`, setProduto, {
             headers: {
                 'Authorization': token
             }
@@ -80,14 +83,14 @@ function ProdutoPost() {
         e.preventDefault()
 
         if (id !== undefined) {
-            put(`/produto`, produto, setProduto, {
+            put(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
             })
             alert('Produto alterado com sucesso !');
         } else {
-            post(`/produto`, produto, setProduto, {
+            post(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
@@ -99,7 +102,7 @@ function ProdutoPost() {
     }
 
     function back() {
-        navigate('/prod')
+        navigate('/produtos')
     }
 
     return (
@@ -174,7 +177,7 @@ function ProdutoPost() {
                 labelId="demo-simple-select-helper-label"
                 id="demo-simple-select-helper"
                 onChange={(e) =>
-                  buscaId(`/categoria/${e.target.value}`, setCategoria, {
+                  buscaId(`/categorias/${e.target.value}`, setCategoria, {
                     headers: {
                       Authorization: token,
                     },

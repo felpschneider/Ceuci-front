@@ -10,3 +10,8 @@
 .text-decorator-none{
     text-decoration:none;
 }
+
+.logoNav{
+    width: 50px;
+    margin: 4px 0 0 0;
+}

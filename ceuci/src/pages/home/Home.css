@@ -7,12 +7,24 @@
     font-weight: bold;
 }
 
+.text-decorator-none{
+    text-decoration: none;
+}
+
 .botao {
     border-color: white !important;
-    background-color: #528240;
+    background-color: #528240!important;
      color: white!important;
 }
 
 .produtos{
     background-color: white !important;
+}
+
+.img{
+    background-image: url("https://i.imgur.com/3CDnfTg.png");
+    background-repeat: no-repeat!important;
+    background-size: cover!important;
+    background-position: center!important;
+    min-height: 100vh!important;
 }

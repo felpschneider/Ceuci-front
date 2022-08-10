@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import {Typography, Button, Box, Card, CardActions, CardContent } from "@mui/material"
-import './DeletarProduto.css';
 import { useNavigate, useParams } from 'react-router-dom';
-import useLocalStorage from 'react-use-localstorage';
-import Produto from '../../../models/Produto';
 import { buscaId, deleteId } from '../../../services/Service';
+import Produto from '../../../models/Produto';
+import './DeletarProduto.css'
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 function DeletarProduto() {
     let navigate = useNavigate();
     const { id } = useParams<{id: string}>();
-    const [token, setToken] = useLocalStorage('token');
-    const [prod, setProd] = useState<Produto>()
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+      (state) => state.tokens
+    );
+    const [produto, setProduto] = useState<Produto>()
 
     useEffect(() => {
         if (token == "") {
@@ -27,7 +30,7 @@ function DeletarProduto() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/produto/${id}`, setProd, {
+        buscaId(`/produtos/${id}`, setProduto, {
             headers: {
               'Authorization': token
             }
@@ -35,17 +38,17 @@ function DeletarProduto() {
         }
 
         function sim() {
-            navigate('/prod')
-            deleteId(`/produto/${id}`, {
+            navigate('/produtos')
+            deleteId(`/produtos/${id}`, {
               headers: {
                 'Authorization': token
               }
             });
-            alert('Postagem deletada com sucesso');
+            alert('Produto deletado com sucesso');
           }
         
           function nao() {
-            navigate('/prod')
+            navigate('/produtos')
           }
   return (
     <>
@@ -54,10 +57,10 @@ function DeletarProduto() {
           <CardContent>
             <Box justifyContent="center">
               <Typography color="textSecondary" gutterBottom>
-                Deseja deletar o Produto:
+                Deseja deletar o produto?
               </Typography>
               <Typography color="textSecondary" >
-              {prod?.nome}
+              {produto?.nome}
               </Typography>
             </Box>
 

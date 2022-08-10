@@ -6,20 +6,24 @@ import { useNavigate, useParams } from 'react-router-dom';
 import useLocalStorage from 'react-use-localstorage';
 import { buscaId, deleteId } from '../../../services/Service';
 import Categoria from '../../../models/Categoria';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
 
 
 function DeletarCategoria() {
   
-  let history = useNavigate();
+  let navigate = useNavigate();
     const {id} = useParams <{id: string}> ();
-    const [token, setToken] = useLocalStorage('token');
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+      (state) => state.tokens
+    );
     const [categoria, setCategoria] = useState<Categoria>( )
 
  
     useEffect(() => {
         if (token == "") {
             alert("Você precisa estar logado")
-            history("/login")
+            navigate("/login")
     
         }
     }, [token])
@@ -31,15 +35,15 @@ function DeletarCategoria() {
     }, [id])
 
     async function findById(id: string) {
-        buscaId(`/categoria/${id}`, setCategoria, {
+        buscaId(`/categorias/${id}`, setCategoria, {
             headers: {
               'Authorization': token
             }
           })
         }
         function sim() {
-          history('/categorias')
-          deleteId(`/categoria/${id}`, {
+          navigate('/categorias')
+          deleteId(`/categorias/${id}`, {
             headers: {
               'Authorization': token
             }
@@ -48,7 +52,7 @@ function DeletarCategoria() {
         }
       
         function nao() {
-          history('/categorias')
+          navigate('/categorias')
         }
           
   return (

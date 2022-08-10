@@ -1,30 +1,74 @@
-import React from 'react'
-import {Grid, Box, Typography, Button} from '@mui/material';
-import './Home.css';
+import React, { useEffect } from "react";
+import { Grid, Box, Typography, Button } from "@mui/material";
+import "./Home.css";
+import ModalProduto from "../../components/produto/modalProduto/ModalProduto";
+import { Link, useNavigate } from "react-router-dom";
+import { useSelector } from "react-redux";
+import { TokenState } from "../../store/tokens/tokensReducer";
 
 function Home() {
+  let navigate = useNavigate();
+  const token = useSelector<TokenState, TokenState["tokens"]>(
+    (state) => state.tokens
+  );
+
+  useEffect(() => {
+    if (token == "") {
+      alert("Você precisa estar logado");
+      navigate("/login");
+    }
+  }, [token]);
   return (
-      <>
-       <Grid container direction="row" justifyContent="center" alignItems="center" className='caixa'>
-                <Grid alignItems="center" item xs={6}>
-                    <Box paddingX={20} >
-                        <Typography variant="h3" gutterBottom color="textPrimary" component="h3" align="center" className='titulo'>Seja bem-vinde!</Typography>
-                        <Typography variant="h5" gutterBottom color="textPrimary" component="h5" align="center" className='titulo'>ODS/PROJETO</Typography>
-                    </Box>
-                    <Box display="flex" justifyContent="center">
-                        <Box marginRight={1}>
-                        </Box>
-                        <Button variant="outlined" className='botao'>Ver Produtos</Button>
-                    </Box>
-                </Grid>
-                <Grid item xs={6} >
-                    <img src="https://i.imgur.com/3CDnfTg.png" alt="imagem home" width="100%" height="100%"/>
-                </Grid>
-                <Grid xs={12} className='produtos'>
-                </Grid>
-            </Grid>
-      </>
-  )
+    <>
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        className="caixa"
+      >
+        <Grid alignItems="center" item xs={6}>
+          <Box paddingX={20}>
+            <Typography
+              variant="h3"
+              gutterBottom
+              color="textPrimary"
+              component="h3"
+              align="center"
+              className="titulo"
+            >
+              Seja bem-vinde!
+            </Typography>
+            <Typography
+              variant="h5"
+              gutterBottom
+              color="textPrimary"
+              component="h5"
+              align="center"
+              className="titulo"
+            >
+              ODS/PROJETO
+            </Typography>
+          </Box>
+          <Box display="flex" justifyContent="center">
+            <Box marginRight={1}>
+              <ModalProduto />
+            </Box>
+
+            <Box>
+              <Link to={"/produtos"} className="text-decorator-none">
+                <Button variant="outlined" className="botao">
+                  Ver Produtos
+                </Button>
+              </Link>
+            </Box>
+          </Box>
+        </Grid>
+        <Grid item xs={6} className="img"></Grid>
+        <Grid xs={12} className="produtos"></Grid>
+      </Grid>
+    </>
+  );
 }
 
-export default Home
+export default Home;

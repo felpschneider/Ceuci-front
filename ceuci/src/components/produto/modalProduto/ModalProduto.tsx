@@ -4,7 +4,7 @@ import Modal from '@mui/material/Modal';
 import {Button,Box } from "@mui/material"
 import CloseIcon from '@material-ui/icons/Close';
 import './ModalProduto.css';
-import CadastroProduto from '../cadastroProuto/CadastroProduto';
+import ProdutoPost from '../produtoPost/ProdutoPost';
 
 function getModalStyle() {
     const top = 50 ;
@@ -50,7 +50,7 @@ function ModalProduto() {
           
           </Box>
           
-          <CadastroProduto/>
+          <ProdutoPost/>
           
         </div>
       );
@@ -59,7 +59,7 @@ function ModalProduto() {
           <Button
             variant="outlined"
             className="btn"
-            onClick={handleOpen}>Nova Postagem</Button>
+            onClick={handleOpen}>Novo Produto</Button>
           <Modal
             open={open}
             onClose={handleClose}

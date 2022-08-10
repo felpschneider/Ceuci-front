@@ -14,7 +14,6 @@ function TabProduto() {
 
     return (
         <>
-
             <TabContext value={value}>
                 <AppBar position='static'>
                     <Tabs centered indicatorColor='secondary' onChange={handleChange}>
