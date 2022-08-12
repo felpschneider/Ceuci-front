@@ -9,11 +9,11 @@ import {
 } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import "./ListaCategoria.css";
-import { toast } from "react-toastify";
 import { busca } from "../../../services/Service";
 import Categoria from "../../../models/Categoria";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
 
 function ListaCategoria() {
   const [categoria, setcategoria] = useState<Categoria[]>([]);
@@ -24,7 +24,15 @@ function ListaCategoria() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado");
+      toast.info('Você precisa estar logado!', {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        });
       navigate("/login");
     }
   }, [token]);

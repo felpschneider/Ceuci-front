@@ -5,6 +5,7 @@ import Categoria from "../../../models/Categoria";
 import { buscaId, post, put } from "../../../services/Service";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
+import { toast } from "react-toastify";
 
 function CadastroCategoria() {
   let navigate = useNavigate();
@@ -19,7 +20,15 @@ function CadastroCategoria() {
 
   useEffect(() => {
     if (token == "") {
-      alert("Você precisa estar logado");
+      toast.info('Você precisa estar logado!', {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        });
       navigate("/login");
     }
   }, [token]);
@@ -63,14 +72,30 @@ function CadastroCategoria() {
           Authorization: token,
         },
       });
-      alert("Categoria atualizado com sucesso");
+      toast.success('Categoria atualizado com sucesso', {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        });
     } else {
       post(`/categorias`, categoria, setCategoria, {
         headers: {
           Authorization: token,
         },
       });
-      alert("Categoria cadastrado com sucesso");
+      toast.success('Categoria cadastrado com sucesso', {
+        position: "top-right",
+        autoClose: 2500,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: true,
+        progress: undefined,
+        });
     }
     back();
   }

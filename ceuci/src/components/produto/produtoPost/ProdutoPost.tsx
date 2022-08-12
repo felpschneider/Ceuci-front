@@ -7,6 +7,7 @@ import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
+import { toast } from "react-toastify";
 
 function ProdutoPost() {
     let navigate = useNavigate();
@@ -18,7 +19,15 @@ function ProdutoPost() {
 
     useEffect(() => {
         if (token == "") {
-            alert("Você precisa estar logado")
+          toast.info('Você precisa estar logado!', {
+            position: "top-right",
+            autoClose: 2500,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            });
             navigate("/login")
 
         }
@@ -88,14 +97,30 @@ function ProdutoPost() {
                     'Authorization': token
                 }
             })
-            alert('Produto alterado com sucesso !');
+            toast.success('Produto alterado com sucesso !', {
+              position: "top-right",
+              autoClose: 2500,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              });
         } else {
             post(`/produtos`, produto, setProduto, {
                 headers: {
                     'Authorization': token
                 }
             })
-            alert('Produto cadastrada com sucesso !');
+            toast.success('Produto cadastrada com sucesso !', {
+              position: "top-right",
+              autoClose: 2500,
+              hideProgressBar: false,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              });
         }
         back()
 
