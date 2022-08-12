@@ -1,31 +1,51 @@
-.box1{
-    background: linear-gradient(36deg, #528240 0%, #bdce66 30%, #a5b452 84%);
-    height: 60px;
+.box1 {
+  background: linear-gradient(36deg, #528240 0%, #bdce66 30%, #a5b452 84%);
+  height: 60px;
 }
 
-.box2{
-    background: linear-gradient(130deg, #528240 0%, #bdce66 30%, #a5b452 84%);
-    height: 40px;
+.box2 {
+  background: linear-gradient(130deg, #528240 0%, #bdce66 30%, #a5b452 84%);
+  height: 40px;
 }
 
-.instagram{
-    font-size: 50px !important;
-    color: var(--cor-branca);
+.instagram {
+  font-size: 50px !important;
+  color: var(--cor-branca);
+  transition: transform 500ms !important;
 }
 
-.linkedin{
-    font-size: 50px !important;
-    color: var(--cor-branca);
-    margin-right: 15px;
+.instagram:hover{
+    transform: scale(1.1);
 }
 
-.github{
-    font-size: 40px !important;
-    padding: 15px;
-    color: var(--cor-branca);
+.linkedin {
+  font-size: 50px !important;
+  color: var(--cor-branca);
+  margin-right: 25px;
+  transition: transform 500ms !important;
 }
 
-.generation{
-    height: 50px !important;
-    color: var(--cor-branca);
+.linkedin:hover{
+    transform: scale(1.1);
+}
+
+.github {
+  font-size: 40px !important;
+  padding: 25px;
+  color: var(--cor-branca);
+  transition: transform 500ms !important;
+}
+
+.github:hover{
+    transform: scale(1.1);
+}
+
+.generation {
+  height: 50px !important;
+  color: var(--cor-branca);
+  transition: transform 500ms !important;
+}
+
+.generation:hover{
+    transform: scale(1.1);
 }

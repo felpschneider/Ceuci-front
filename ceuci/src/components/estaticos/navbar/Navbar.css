@@ -1,17 +1,35 @@
-.menu-color{
-    background: linear-gradient(36deg, rgba(82,130,64,1) 0%, rgba(189,206,102,1) 39%, rgba(165,180,82,1) 84%);
+.menu-color {
+  background: linear-gradient(
+    36deg,
+    rgba(82, 130, 64, 1) 0%,
+    rgba(189, 206, 102, 1) 39%,
+    rgba(165, 180, 82, 1) 84%
+  );
 }
 
-.cursor{
-    cursor: pointer;
-    color: var(--cor-branca);
+.mg-between{
+    padding: 0 3vw 0 0vw;
 }
 
-.text-decorator-none{
-    text-decoration:none;
+.cursor {
+  cursor: pointer;
+  color: var(--cor-branca);
+  transition: transform 500ms !important;
+}
+.cursor:hover {
+  color: rgba(82, 130, 64, 1);
+  transform: scale(1.1);
 }
 
-.logoNav{
-    width: 50px;
-    margin: 4px 0 0 0;
+.MuiTypography-root.color-clicked {
+  color: rgba(82, 130, 64, 1) !important;
+}
+
+.text-decorator-none {
+  text-decoration: none;
+}
+
+.logoNav {
+  width: 50px;
+  margin: 4px 0 0 0;
 }

@@ -68,26 +68,10 @@ function Footer() {
               gutterBottom
               style={{ color: "white" }}
             >
-              Ceuci© 2022 Copyright:
+              Ceuci© 2022 | Todos os direitos reservados
             </Typography>
-          </Box>
-          {/* <Box>
-              <a
-                target="_blank"
-                href="https://brasil.generation.org"
-                rel="noopener noreferrer"
-              >
-                <Typography
-                  variant="subtitle2"
-                  gutterBottom
-                  style={{ color: "white" }}
-                  align="center"
-                >
-                  brasil.generation.org
-                </Typography>
-              </a>
-            </Box> */}
-        </Box>
+            </Box>
+            </Box>
       </Grid>
     </Grid>;
   }

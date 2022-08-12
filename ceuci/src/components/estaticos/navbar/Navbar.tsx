@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Box } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, Grid } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -22,77 +22,76 @@ function Navbar() {
   var navbarComponent;
 
   if (token != "") {
-    navbarComponent=
-    <AppBar position="static">
-      <Toolbar variant="dense" className="menu-color">
-        <Box className="cursor">
-          <Typography variant="h5" color="inherit">
-            <Link to={"/home"}>
-              <img
-                src="https://i.imgur.com/3dWhdta.png"
-                alt=""
-                className="logoNav"
-              />
-            </Link>
-          </Typography>
-        </Box>
-
-        <Box display="flex">
-          <Link to="/home" className="text-decorator-none">
-            <Box mx={1} className="cursor">
-              <Typography variant="h6" color="inherit">
-                Home
-              </Typography>
+    navbarComponent = (
+      <AppBar position="static">
+        <Toolbar variant="dense" className="menu-color">
+          <Grid container justifyContent="space-between">
+            <Box display="flex" justifyContent="flex-start" alignItems="center">
+              <Link to={"/home"}>
+                <Typography variant="h4" color="inherit">
+                  <img
+                    src="https://i.imgur.com/3dWhdta.png"
+                    alt=""
+                    className="logoNav cursor"
+                  />
+                </Typography>
+              </Link>
             </Box>
-          </Link>
-          <Link to="/sobre" className="text-decorator-none">
-            <Box mx={1} className="cursor">
-              <Typography variant="h6" color="inherit">
-                Sobre
-              </Typography>
+            <Box display="flex" justifyContent="center" alignItems="center">
+              <Link to="/home" className="text-decorator-none">
+                <Box mx={1} className="cursor mg-between">
+                  <Typography variant="h5" color="inherit">
+                    Home
+                  </Typography>
+                </Box>
+              </Link>
+              <Link to="/sobre" className="text-decorator-none">
+                <Box mx={1} className="cursor mg-between">
+                  <Typography variant="h5" color="inherit">
+                    Sobre
+                  </Typography>
+                </Box>
+              </Link>
+              <Link to="/produtos" className="text-decorator-none">
+                <Box mx={1} className="cursor mg-between">
+                  <Typography variant="h5" color="inherit">
+                    Produtos
+                  </Typography>
+                </Box>
+              </Link>
+              <Link to="/categorias" className="text-decorator-none">
+                <Box mx={1} className="cursor mg-between">
+                  <Typography variant="h5" color="inherit">
+                    Categoria
+                  </Typography>
+                </Box>
+              </Link>
+              <Link to="/cadastroCategoria" className="text-decorator-none">
+                <Box mx={1} className="cursor mg-between">
+                  <Typography variant="h5" color="inherit">
+                    Cadastrar Categoria
+                  </Typography>
+                </Box>
+              </Link>
+              <Box mx={1} className="cursor">
+                <Typography variant="h5" color="inherit">
+                  Contato
+                </Typography>
+              </Box>
             </Box>
-          </Link>
-          <Link to="/produtos" className="text-decorator-none">
-            <Box mx={1} className="cursor">
-              <Typography variant="h6" color="inherit">
-                Produtos
-              </Typography>
+            <Box display="flex" justifyContent="center" alignItems="center">
+              <Box mx={1} className="cursor mg-left" onClick={goLogout}>
+                <Typography variant="h5" color="inherit">
+                  Logout
+                </Typography>
+              </Box>
             </Box>
-          </Link>
-          <Link to="/categorias" className="text-decorator-none">
-            <Box mx={1} className="cursor">
-              <Typography variant="h6" color="inherit">
-                Categoria
-              </Typography>
-            </Box>
-          </Link>
-
-          <Link to="/cadastroCategoria" className="text-decorator-none">
-            <Box mx={1} className="cursor">
-              <Typography variant="h6" color="inherit">
-                Cadastrar Categoria
-              </Typography>
-            </Box>
-          </Link>
-          <Box mx={1} className="cursor">
-            <Typography variant="h6" color="inherit">
-              Contato
-            </Typography>
-          </Box>
-          <Box mx={1} className="cursor" onClick={goLogout}>
-            <Typography variant="h6" color="inherit">
-              logout
-            </Typography>
-          </Box>
-        </Box>
-      </Toolbar>
-    </AppBar>;
+          </Grid>
+        </Toolbar>
+      </AppBar>
+    );
   }
-  return (
-    <>
-    {navbarComponent}
-    </>
-  );
+  return <>{navbarComponent}</>;
 }
 
 export default Navbar;
