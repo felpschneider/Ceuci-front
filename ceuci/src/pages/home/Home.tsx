@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
+import Carrossel from "../../components/carrossel/Carrossel";
 
 function Home() {
   let navigate = useNavigate();
@@ -13,20 +14,7 @@ function Home() {
     (state) => state.tokens
   );
 
-  useEffect(() => {
-    if (token == "") {
-      toast.info('Você precisa estar logado!', {
-        position: "top-right",
-        autoClose: 2500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        });
-      navigate("/login");
-    }
-  }, [token]);
+
   return (
     <>
       <Grid
@@ -73,7 +61,9 @@ function Home() {
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={6} className="img"></Grid>
+        <Grid item xs={6}>
+          <Carrossel/>
+        </Grid>
         <Grid xs={12} className="produtos"></Grid>
       </Grid>
     </>

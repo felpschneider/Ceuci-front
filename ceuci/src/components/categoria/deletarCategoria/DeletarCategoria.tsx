@@ -20,21 +20,6 @@ function DeletarCategoria() {
     const [categoria, setCategoria] = useState<Categoria>( )
 
  
-    useEffect(() => {
-        if (token == "") {
-          toast.info('Você precisa estar logado!', {
-            position: "top-right",
-            autoClose: 2500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            });
-            navigate("/login")
-    
-        }
-    }, [token])
 
     useEffect(() =>{
         if(id !== undefined){

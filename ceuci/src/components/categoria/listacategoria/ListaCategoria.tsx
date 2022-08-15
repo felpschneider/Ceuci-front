@@ -22,21 +22,6 @@ function ListaCategoria() {
   );
   let navigate = useNavigate();
 
-  useEffect(() => {
-    if (token == "") {
-      toast.info('Você precisa estar logado!', {
-        position: "top-right",
-        autoClose: 2500,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: false,
-        draggable: true,
-        progress: undefined,
-        });
-      navigate("/login");
-    }
-  }, [token]);
-
   async function getCategoria() {
     await busca("/categorias", setcategoria, {
       headers: {

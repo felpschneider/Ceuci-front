@@ -4,21 +4,22 @@ import Carousel from "react-elastic-carousel";
 function Carrossel() {
   var items = [
     {
-      img: "https://www.riotgames.com/darkroom/1440/b540da2b9afe5ec83e842a2d84f6dbb1:e95535ecd35e48592908762c9353926a/arcane-final-poster-16x9-no-text-no-border.jpg",
-    },
-    { img: "https://trecobox.com.br/wp-content/uploads/2021/11/Arcane-2.jpg" },
+      url: "https://i.pinimg.com/564x/81/a6/df/81a6dfc2c61a60e609e9f6098b022f6c.jpg",},
+    { url: "https://i.pinimg.com/564x/4c/2d/70/4c2d70c51c1d1a20aa3f9bc1d2eff2a7.jpg" ,},
     {
-      img: "https://i.blogs.es/79f36c/portada-analisis-trailer-arcane-league-of-legends/1366_2000.jpeg",
-    },
+      url: "https://i.pinimg.com/564x/38/60/9c/38609cf6ae8da0a527e8dddda390f0a0.jpg",},
     {
-      img: "https://cdn1.dotesports.com/wp-content/uploads/sites/3/2021/09/26143317/LUkXhMag.jpeg",
-    },
+      url: "https://i.pinimg.com/564x/30/e3/78/30e37826f26187b4b4d0f170c9ff378a.jpg",}
   ];
 
   return (
     <Carousel isRTL={false}>
       {items.map((item) => (
-        <div>{item.img}</div>
+        <div style={{
+          background: `url({item.url})`,
+          backgroundSize: "cover",
+          height: "100vh",
+        }}></div>
       ))}
     </Carousel>
   );

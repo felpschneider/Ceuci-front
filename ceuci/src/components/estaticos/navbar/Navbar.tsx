@@ -25,7 +25,7 @@ function Navbar() {
       draggable: true,
       progress: undefined,
     });
-    navigate("/login");
+    navigate("/home");
   }
 
   var navbarComponent;

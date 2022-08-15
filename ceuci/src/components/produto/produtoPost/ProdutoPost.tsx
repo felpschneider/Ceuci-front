@@ -17,21 +17,6 @@ function ProdutoPost() {
       (state) => state.tokens
     );
 
-    useEffect(() => {
-        if (token == "") {
-          toast.info('Você precisa estar logado!', {
-            position: "top-right",
-            autoClose: 2500,
-            hideProgressBar: false,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            });
-            navigate("/login")
-
-        }
-    }, [token])
 
     const [categoria, setCategoria] = useState<Categoria>(
         {
@@ -139,7 +124,7 @@ function ProdutoPost() {
               component="h1"
               align="center"
             >
-              Formulário de cadastro de produtos
+              Cadastrar produto
             </Typography>
             <TextField
                 value={produto.nome}
