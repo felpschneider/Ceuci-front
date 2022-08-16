@@ -89,10 +89,16 @@ function Navbar() {
               </Box>
             </Box>
             <Box display="flex" justifyContent="center" alignItems="center">
-              <Box mx={1} className="cursor mg-left" onClick={goLogout}>
+              <Box mx={1} className="cursor flex-display" onClick={goLogout}>
                 <Typography variant="h5" color="inherit">
                   Sair
                 </Typography>
+                <img
+                  src="https://cdn-icons-png.flaticon.com/512/1286/1286853.png"
+                    alt=""
+                    className="icone-sair"
+                    
+                />
               </Box>
             </Box>
           </Grid>
@@ -159,12 +165,12 @@ function Navbar() {
             </Box>
             <Box display="flex" justifyContent="center" alignItems="center">
               <Link to="/login" className="text-decorator-none">
-              <Box mx={1} className="cursor mg-left">
-                <Typography variant="h5" color="inherit">
-                  Entrar
-                </Typography>
+                <Box mx={1} className="cursor mg-left">
+                  <Typography variant="h5" color="inherit">
+                    Entrar
+                  </Typography>
                 </Box>
-                </Link>
+              </Link>
             </Box>
           </Grid>
         </Toolbar>

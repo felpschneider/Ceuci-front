@@ -13,13 +13,11 @@ function Carrossel() {
   ];
 
   return (
-    <Carousel isRTL={false}>
+    <Carousel isRTL={false} enableAutoPlay={true} showArrows={false} pagination={false} transitionMs={500} className="tamanho" autoPlaySpeed={4000}>
       {items.map((item) => (
-        <div style={{
-          background: `url({item.url})`,
-          backgroundSize: "cover",
-          height: "100vh",
-        }}></div>
+        <>
+        <img src={item.url} alt="fotos do carrossel" />
+        </>
       ))}
     </Carousel>
   );

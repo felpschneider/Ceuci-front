@@ -72,7 +72,7 @@ function CadastroCategoria() {
           Authorization: token,
         },
       });
-      toast.success('Categoria atualizado com sucesso', {
+      toast.success('Categoria atualizada com sucesso!', {
         position: "top-right",
         autoClose: 2500,
         hideProgressBar: false,
@@ -87,7 +87,7 @@ function CadastroCategoria() {
           Authorization: token,
         },
       });
-      toast.success('Categoria cadastrado com sucesso', {
+      toast.success('Categoria cadastrada com sucesso!', {
         position: "top-right",
         autoClose: 2500,
         hideProgressBar: false,
@@ -113,7 +113,7 @@ function CadastroCategoria() {
           component="h1"
           align="center"
         >
-          Formulário de cadastro categoria
+          Cadastrar categoria
         </Typography>
         <TextField
           value={categoria.tipo}

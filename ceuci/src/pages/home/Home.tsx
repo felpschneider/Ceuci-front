@@ -47,19 +47,28 @@ function Home() {
               ODS/PROJETO
             </Typography>
           </Box>
-          <Box display="flex" justifyContent="center">
+          
+          <Box display="flex" justifyContent="center" flexDirection="column" alignItems="center" marginTop={1}>
             <Box marginRight={1}>
               <ModalProduto />
             </Box>
 
-            <Box>
+            <Box marginRight={1} justifyContent="center" marginTop={1}>
               <Link to={"/produtos"} className="text-decorator-none">
                 <Button variant="outlined" className="botao">
                   Ver Produtos
                 </Button>
               </Link>
             </Box>
-          </Box>
+            <Box marginTop={1}>
+              <Link to={"/cadastroCategoria"} className="text-decorator-none">
+                <Button variant="outlined" className="botao">
+                  Nova categoria
+                </Button>
+              </Link>
+              </Box>
+              </Box>
+          
         </Grid>
         <Grid item xs={6}>
           <Carrossel/>

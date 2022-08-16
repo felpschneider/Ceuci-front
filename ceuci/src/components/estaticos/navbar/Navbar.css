@@ -7,8 +7,8 @@
   );
 }
 
-.mg-between{
-    padding: 0 3vw 0 0vw;
+.mg-between {
+  padding: 0 3vw 0 0vw;
 }
 
 .cursor {
@@ -33,6 +33,17 @@
   width: 50px;
   margin: 4px 0 0 0;
 }
-.ceuci{
+.ceuci {
   width: 150px;
+}
+
+.icone-sair {
+  margin: 3px 0 0 10px;
+  height: 20px;
+}
+
+.flex-display {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

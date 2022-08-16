@@ -8,6 +8,7 @@ import { busca, buscaId, post, put } from '../../../services/Service';
 import { useSelector } from 'react-redux';
 import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from "react-toastify";
+import { Grid } from '@mui/material';
 
 function ProdutoPost() {
     let navigate = useNavigate();
@@ -82,7 +83,7 @@ function ProdutoPost() {
                     'Authorization': token
                 }
             })
-            toast.success('Produto alterado com sucesso !', {
+            toast.success('Produto alterado com sucesso!', {
               position: "top-right",
               autoClose: 2500,
               hideProgressBar: false,
@@ -97,7 +98,7 @@ function ProdutoPost() {
                     'Authorization': token
                 }
             })
-            toast.success('Produto cadastrada com sucesso !', {
+            toast.success('Produto cadastrado com sucesso!', {
               position: "top-right",
               autoClose: 2500,
               hideProgressBar: false,
@@ -116,7 +117,7 @@ function ProdutoPost() {
     }
 
     return (
-        <Container maxWidth="sm">
+        <Grid container maxWidth="50vw" maxHeight="100vh" className="bg-cadastrar-produto">
           <form onSubmit={onSubmit}>
             <Typography
               variant="h3"
@@ -130,7 +131,7 @@ function ProdutoPost() {
                 value={produto.nome}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
               id="nome"
-              label="nome"
+              label="Nome"
               variant="outlined"
               name="nome"
               margin="normal"
@@ -141,7 +142,7 @@ function ProdutoPost() {
               value={produto.descricao}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
               id="descricao"
-              label="descricao"
+              label="Descrição"
               variant="outlined"
               name="descricao"
               margin="normal"
@@ -152,7 +153,7 @@ function ProdutoPost() {
               value={produto.produtora}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
               id="produtora"
-              label="produtora"
+              label="Produtora"
               variant="outlined"
               name="produtora"
               margin="normal"
@@ -163,7 +164,7 @@ function ProdutoPost() {
               value={produto.preco}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
               id="preco"
-              label="preco"
+              label="Preço"
               variant="outlined"
               name="preco"
               margin="normal"
@@ -174,7 +175,7 @@ function ProdutoPost() {
               value={produto.foto}
               onChange={(e: ChangeEvent<HTMLInputElement>) => updatedProduto(e)}
               id="foto"
-              label="foto"
+              label="Foto"
               variant="outlined"
               name="foto"
               margin="normal"
@@ -204,7 +205,7 @@ function ProdutoPost() {
               </Button>
             </FormControl>
           </form>
-        </Container>
+        </Grid>
       );
     }
 export default ProdutoPost;

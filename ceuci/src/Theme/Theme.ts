@@ -23,20 +23,29 @@ const Theme = createTheme({
     MuiButton: {
       root: {
         borderRadius: '8px',
-        fontWeight:"bold",
+        fontWeight: "bold",
       },
-      text:{
+      text: {
         secondary: {
-          color:'#ffffff'
+          color: '#ffffff'
         },
       },
     },
     MuiOutlinedInput: {
       root: {
+        "& $notchedOutline": {
+          borderColor: "rgba(82, 130, 64, 1)"
+        },
+        "&:hover $notchedOutline": {
+          borderColor: "rgba(82, 130, 64, 1)"
+        },
+        "&$focused $notchedOutline": {
+          borderColor: "rgba(82, 130, 64, 1)"
+        },
         borderRadius: '8px',
-        backgroundColor: 'rgba(131, 131, 131,0.4)',
+        backgroundColor: '#d9b570',
         // Cor do texto do Form
-        color:'#000000'
+        color: '#000000'
       }
       ,
     },
@@ -46,19 +55,19 @@ const Theme = createTheme({
         color: '#000000',
       },
     },
-    MuiInputLabel:{
-      root:{
+    MuiInputLabel: {
+      root: {
         //Cor do Label
-        color:'#000000'
+        color: '#000000'
       }
     },
-    MuiInputAdornment:{
-      filled:{
-        color: "#000000"  
+    MuiInputAdornment: {
+      filled: {
+        color: "#000000"
       },
-      root:{
-        color:"#000000",
-    },
+      root: {
+        color: "#000000",
+      },
     },
   }
 }
