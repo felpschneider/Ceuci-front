@@ -42,7 +42,7 @@ function ListaProduto() {
       maxWidth: 345,
     },
     media: {
-      height: 140,
+      height: 180,
     },
   });
 
@@ -52,41 +52,67 @@ function ListaProduto() {
     <>
       <Box
         display="flex"
-        gap="16px"
-        m="16px"
+        gap="30px"
         justifyContent="center"
+        alignItems="center"
         flexDirection="row"
         flexWrap="wrap"
       >
-      {produto.map((produto) => (
+        {produto.map((produto) => (
           <Card className={classes.root}>
             <CardActionArea>
               <CardMedia
                 component="img"
                 className={classes.media}
-                image="https://cdn.shopify.com/s/files/1/2133/1999/products/veggiee-basket.jpg?v=1545729020"
-                title="Contemplative Reptile"
+                image={produto.foto}
+                title="foto do produto"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  Lizard
+                  {produto.nome}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  Lizards are a widespread group of squamate reptiles, with over
-                  6,000 species, ranging across all continents except Antarctica
+                  {produto.descricao}
                 </Typography>
+                <Typography variant="h6" color="initial"></Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
-              <Button size="small" color="primary">
-                Share
-              </Button>
-              <Button size="small" color="primary">
-                Learn More
-              </Button>
+              <Box display="flex" justifyContent="center" mb={1.5}>
+                <Link
+                  to={`/cadastroProduto/${produto.id}`}
+                  className="text-decorator-none"
+                >
+                  <Box mx={1} justifyContent="center">
+                    <Button
+                      variant="contained"
+                      className="marginLeft botao"
+                      size="small"
+                      color="primary"
+                    >
+                      atualizar
+                    </Button>
+                  </Box>
+                </Link>
+                <Link
+                  to={`/deletarProduto/${produto.id}`}
+                  className="text-decorator-none"
+                >
+                  <Box mx={1}>
+                    <Button
+                      variant="contained"
+                      size="small"
+                      color="secondary"
+                      className="botao-deletar"
+                    >
+                      deletar
+                    </Button>
+                  </Box>
+                </Link>
+              </Box>
             </CardActions>
           </Card>
-      ))}
+        ))}
       </Box>
     </>
   );

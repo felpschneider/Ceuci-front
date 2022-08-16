@@ -4,7 +4,6 @@
 
 .titulo {
   color: #528240 !important;
-  font-weight: bold;
 }
 
 .text-decorator-none {
@@ -12,15 +11,15 @@
 }
 
 .botao {
-  border-color: white !important;
+  border-color: #f5faf5 !important;
   background-color: #528240 !important;
-  color: white !important;
+  color: #f5faf5!important;
   display: flex;
   align-items: center;
 }
 
 .produtos {
-  background-color: white !important;
+  background-color: #f5faf5 !important;
 }
 
 .img {
@@ -29,4 +28,24 @@
   background-size: cover !important;
   background-position: center !important;
   min-height: 100vh !important;
+}
+
+.bg-img{
+  background-image: url(https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+
+}
+.ods-img{
+  background-image: url(https://www.nossosobjetivos.com.br/wp-content/themes/ods/_assets/images/icon/5.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position:center;
+
+}
+
+.margens-ceuci{
+  width: 200px;
+  margin-bottom: 20px;
 }

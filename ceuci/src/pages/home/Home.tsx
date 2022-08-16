@@ -14,9 +14,10 @@ function Home() {
     (state) => state.tokens
   );
 
+  var homeComponent;
 
-  return (
-    <>
+  if (token != "") {
+    homeComponent = (
       <Grid
         container
         direction="row"
@@ -47,8 +48,14 @@ function Home() {
               ODS/PROJETO
             </Typography>
           </Box>
-          
-          <Box display="flex" justifyContent="center" flexDirection="column" alignItems="center" marginTop={1}>
+
+          <Box
+            display="flex"
+            justifyContent="center"
+            flexDirection="column"
+            alignItems="center"
+            marginTop={1}
+          >
             <Box marginRight={1}>
               <ModalProduto />
             </Box>
@@ -66,17 +73,126 @@ function Home() {
                   Nova categoria
                 </Button>
               </Link>
-              </Box>
-              </Box>
-          
+            </Box>
+          </Box>
         </Grid>
         <Grid item xs={6}>
-          <Carrossel/>
+          <Carrossel />
         </Grid>
         <Grid xs={12} className="produtos"></Grid>
       </Grid>
-    </>
-  );
+    );
+  } else {
+    homeComponent = (
+      <Grid
+        container
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+        className="caixa"
+      >
+        <Grid alignItems="center" item xs={6}>
+          <Box paddingX={20} className="bg-img" height="100vh"></Box>
+        </Grid>
+
+        <Grid item xs={6}>
+          <Box paddingX={20} display="flex" justifyContent="center" alignItems="center" flexDirection="column">
+            <Box>
+              <img
+                src="https://i.imgur.com/hSrWDog.png"
+                alt="Logo Ceuci"
+                className="margens-ceuci"
+              />
+            </Box>
+            <Typography
+              variant="h5"
+              color="textPrimary"
+              component="h5"
+              align="center"
+              className="titulo"
+            >
+              O projeto Ceuci foi feito baseado na ODS 5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, dolorum sunt illo possimus neque voluptatibus laborum dignissimos saepe nam quos odit inventore? Quaerat suscipit iure sapiente earum esse incidunt dolor.
+            </Typography>
+          </Box>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            gap={1}
+            marginTop="20px"
+          >
+            <Box justifyContent="center">
+              <Link to={"/produtos"} className="text-decorator-none">
+                <Button variant="outlined" className="botao">
+                  Comprar
+                </Button>
+              </Link>
+            </Box>
+            <Box>
+              <Link to={"/login"} className="text-decorator-none">
+                <Button variant="outlined" className="botao">
+                  Sou produtora
+                </Button>
+              </Link>
+            </Box>
+          </Box>
+          
+        </Grid>
+        {/* section 2: */}
+        
+
+        <Grid item xs={6}>
+          <Box paddingX={20} display="flex" justifyContent="center" alignItems="center" flexDirection="column">
+            <Box>
+              ODS 5
+              <img
+                src="https://i.imgur.com/hSrWDog.png"
+                alt="Logo Ceuci"
+                className="margens-ceuci"
+              />
+            </Box>
+            <Typography
+              variant="h5"
+              color="textPrimary"
+              component="h5"
+              align="center"
+              className="titulo"
+            >
+              O projeto Ceuci foi feito baseado na ODS 5 Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, dolorum sunt illo possimus neque voluptatibus laborum dignissimos saepe nam quos odit inventore? Quaerat suscipit iure sapiente earum esse incidunt dolor.
+            </Typography>
+          </Box>
+          <Box
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            gap={1}
+            marginTop="20px"
+          >
+            <Box justifyContent="center">
+              <Link to={"/produtos"} className="text-decorator-none">
+                <Button variant="outlined" className="botao">
+                  Comprar
+                </Button>
+              </Link>
+            </Box>
+            <Box>
+              <Link to={"/login"} className="text-decorator-none">
+                <Button variant="outlined" className="botao">
+                  Sou produtora
+                </Button>
+              </Link>
+            </Box>
+          </Box>
+          
+        </Grid>
+        <Grid alignItems="center" item xs={6}>
+          <Box paddingX={20} className="ods-img" height="100vh"></Box>
+        </Grid>
+      </Grid>
+    );
+  }
+
+  return <>{homeComponent}</>;
 }
 
 export default Home;

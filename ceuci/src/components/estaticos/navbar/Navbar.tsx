@@ -95,9 +95,8 @@ function Navbar() {
                 </Typography>
                 <img
                   src="https://cdn-icons-png.flaticon.com/512/1286/1286853.png"
-                    alt=""
-                    className="icone-sair"
-                    
+                  alt=""
+                  className="icone-sair"
                 />
               </Box>
             </Box>
@@ -165,10 +164,15 @@ function Navbar() {
             </Box>
             <Box display="flex" justifyContent="center" alignItems="center">
               <Link to="/login" className="text-decorator-none">
-                <Box mx={1} className="cursor mg-left">
+                <Box mx={1} className="cursor mg-left flex-display">
                   <Typography variant="h5" color="inherit">
                     Entrar
                   </Typography>
+                  <img
+                    src="https://cdn-icons.flaticon.com/png/512/4929/premium/4929629.png?token=exp=1660683734~hmac=3c01980673a03c3c382457a528286ae3"
+                    alt=""
+                    className="icone-sair"
+                  />
                 </Box>
               </Link>
             </Box>

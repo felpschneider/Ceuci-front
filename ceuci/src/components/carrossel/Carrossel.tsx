@@ -4,8 +4,8 @@ import Carousel from "react-elastic-carousel";
 function Carrossel() {
   var items = [
     {
-      url: "https://i.pinimg.com/564x/81/a6/df/81a6dfc2c61a60e609e9f6098b022f6c.jpg",},
-    { url: "https://i.pinimg.com/564x/4c/2d/70/4c2d70c51c1d1a20aa3f9bc1d2eff2a7.jpg" ,},
+      url: "https://images.unsplash.com/photo-1509100194014-d49809396daa?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80",},
+    { url: "https://cdn.discordapp.com/attachments/989142309927006220/1009158559935774760/mulher-agricultora.jpg" ,},
     {
       url: "https://i.pinimg.com/564x/38/60/9c/38609cf6ae8da0a527e8dddda390f0a0.jpg",},
     {
@@ -13,10 +13,10 @@ function Carrossel() {
   ];
 
   return (
-    <Carousel isRTL={false} enableAutoPlay={true} showArrows={false} pagination={false} transitionMs={500} className="tamanho" autoPlaySpeed={4000}>
+    <Carousel isRTL={false} enableAutoPlay={true} showArrows={false} pagination={false}   autoPlaySpeed={4000}>
       {items.map((item) => (
         <>
-        <img src={item.url} alt="fotos do carrossel" />
+        <img src={item.url} alt="fotos do carrossel" className="tamanho"/>
         </>
       ))}
     </Carousel>
