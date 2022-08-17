@@ -1,25 +1,52 @@
-.caixa {
-  background-color: #f5faf5;
-}
+@import url("https://fonts.googleapis.com/css2?family=Nixie+One&display=swap");
 
-.titulo {
-  color: #528240 !important;
+.caixa {
+  background-color: #fdfaf2;
 }
 
 .text-decorator-none {
   text-decoration: none;
 }
 
-.botao {
-  border-color: #f5faf5 !important;
+.botao{
+  border-color: #fdfaf2 !important;
   background-color: #528240 !important;
-  color: #f5faf5!important;
+  color: #fdfaf2 !important;
   display: flex;
   align-items: center;
+  border-radius: 20px !important;
+}
+.botao:hover {
+  border-color: #fdfaf2 !important;
+  background-color: #8da026 !important;
+  color: #fdfaf2 !important;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  transition: 300ms;
+}
+
+.botao-variant1{
+  border-color: #fdfaf2 !important;
+  background-color: #528240 !important;
+  color: #fdfaf2 !important;
+  display: flex;
+  align-items: center;
+  border-radius: 20px!important;
+  transition: 300ms;
+}
+.botao-variant1:hover{
+  border-color: #fdfaf2 !important;
+  background-color: #FF3A21 !important;
+  color: #fdfaf2 !important;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  transition: 300ms;
 }
 
 .produtos {
-  background-color: #f5faf5 !important;
+  background-color: #fdfaf2 !important;
 }
 
 .img {
@@ -30,22 +57,95 @@
   min-height: 100vh !important;
 }
 
-.bg-img{
-  background-image: url(https://images.unsplash.com/photo-1461354464878-ad92f492a5a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80);
+.bg-img {
+  background-image: url(https://images.unsplash.com/photo-1567547920970-65999ed2024a?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=1080&ixid=MnwxfDB8MXxyYW5kb218MHx8aGFydmVzdHx8fHx8fDE2NjA2OTIwNDA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1920);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position:center;
-
+  background-position: center;
 }
-.ods-img{
-  background-image: url(https://www.nossosobjetivos.com.br/wp-content/themes/ods/_assets/images/icon/5.png);
+.ods-img {
+  background-image: url(https://i.imgur.com/IB4IwOz.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position:center;
-
+  background-position: center;
+  /* transition: transform 0.6s;
+  transform-style: preserve-3d;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); */
 }
 
-.margens-ceuci{
-  width: 200px;
+/* .ods-img:hover{
+  transform: rotateY(180deg);
+} */
+
+/* .flip-card-back {
+  background-color: #fdfaf2;
+  color: white;
+  transform: rotateY(180deg);
+} */
+
+.margens-ceuci {
+  width: 275px;
   margin-bottom: 20px;
+}
+
+.font-color-ods {
+  color: #8da026 !important;
+}
+
+.font-color-ods-alt {
+  color: #FF3A21 !important;
+}
+
+.ods-logo {
+  font-family: "Nixie One", cursive, Times, serif, Roboto !important;
+  margin-bottom: 20px !important;
+  font-size: 75px !important;
+  font-weight: 500 !important;
+}
+
+.titulo {
+  font-family: "Nixie One", cursive, Times, serif, Roboto !important;
+  font-size: 35px !important;
+  font-weight: 600 !important;
+  color: black;
+}
+
+.titulo-diferente {
+  font-family: "Nixie One", cursive, Times, serif, Roboto !important;
+  font-size: 35px !important;
+  font-weight: 600 !important;
+  color: #8da026 !important;
+}
+
+.texto-ods {
+  font-family: "Nixie One", cursive, Times, serif, Roboto !important;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  color: black;
+}
+
+.bg-img-produtora{
+  background-image: url(https://images.unsplash.com/photo-1603380381196-148729a0c8e4?crop=entropy&cs=tinysrgb&fit=crop&fm=jpg&h=2160&ixid=MnwxfDB8MXxyYW5kb218MHx8aGFydmVzdHx8fHx8fDE2NjA2OTI5OTk&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=3840);
+  
+ background-size:cover ;
+}
+
+.fundo-produtora{
+  display: flex;
+  justify-content: flex-start!important;
+  align-items: flex-end;
+  padding-left: 1vw ;
+ padding-bottom: 15vh;
+}
+
+.subtitulo{
+  font-family: "Nixie One", cursive, Times, serif, Roboto !important;
+  font-size: 25px !important;
+  font-weight: 600 !important;
+  color: black;
+}
+
+.fundo-box{
+  background-color: #fdfaf2;
+  max-width: fit-content!important;
 }

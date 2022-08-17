@@ -1,5 +1,5 @@
 import React from "react";
-import { AppBar, Toolbar, Typography, Box, Grid } from "@mui/material";
+import { AppBar, Toolbar, Typography, Box, Grid, Button } from "@mui/material";
 import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { useSelector, useDispatch } from "react-redux";
@@ -30,7 +30,7 @@ function Navbar() {
 
   var navbarComponent;
 
-  if (token != "") {
+  if (token !== "") {
     navbarComponent = (
       <AppBar position="static">
         <Toolbar variant="dense" className="menu-color">
@@ -38,15 +38,15 @@ function Navbar() {
             <Box display="flex" justifyContent="flex-start" alignItems="center">
               <Link to={"/home"}>
                 <Typography variant="h4" color="inherit">
-                  <div className="cursor">
+                  <div className="pointer">
                     <img
                       src="https://i.imgur.com/hSrWDog.png"
-                      alt=""
+                      alt="Logo escrita Ceuci"
                       className="ceuci"
                     />
                     <img
                       src="https://i.imgur.com/3dWhdta.png"
-                      alt=""
+                      alt="Logo Ceuci"
                       className="logoNav"
                     />
                   </div>
@@ -112,7 +112,7 @@ function Navbar() {
             <Box display="flex" justifyContent="flex-start" alignItems="center">
               <Link to={"/home"}>
                 <Typography variant="h4" color="inherit">
-                  <div className="cursor">
+                  <div className="pointer">
                     <img
                       src="https://i.imgur.com/hSrWDog.png"
                       alt=""
@@ -149,13 +149,6 @@ function Navbar() {
                   </Typography>
                 </Box>
               </Link>
-              <Link to="/categorias" className="text-decorator-none">
-                <Box mx={1} className="cursor mg-between">
-                  <Typography variant="h5" color="inherit">
-                    Categoria
-                  </Typography>
-                </Box>
-              </Link>
               <Box mx={1} className="cursor">
                 <Typography variant="h5" color="inherit">
                   Contato
@@ -164,7 +157,7 @@ function Navbar() {
             </Box>
             <Box display="flex" justifyContent="center" alignItems="center">
               <Link to="/login" className="text-decorator-none">
-                <Box mx={1} className="cursor mg-left flex-display">
+                <Box mx={1} className="cursor flex-display">
                   <Typography variant="h5" color="inherit">
                     Entrar
                   </Typography>
@@ -175,6 +168,15 @@ function Navbar() {
                   />
                 </Box>
               </Link>
+              <Box className="">
+                <Button variant="contained" className="cursor flex-display text-decorator-none carrinho-cor">
+                  <img
+                    src="https://cdn-icons.flaticon.com/png/512/2543/premium/2543378.png?token=exp=1660741737~hmac=d0e2ae800bb22ae5304b54cb06427416"
+                    alt="Carrinho logo"
+                    className="carrinho"
+                  />
+                </Button>
+              </Box>
             </Box>
           </Grid>
         </Toolbar>

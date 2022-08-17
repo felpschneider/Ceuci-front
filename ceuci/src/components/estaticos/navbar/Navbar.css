@@ -11,6 +11,10 @@
   padding: 0 3vw 0 0vw;
 }
 
+.pointer {
+  cursor: pointer;
+}
+
 .cursor {
   cursor: pointer;
   color: var(--cor-branca);
@@ -46,4 +50,19 @@
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+.carrinho {
+  height: 30px;
+}
+
+.carrinho-cor{
+  background-color: rgba(165, 180, 82, 1)!important;
+  border-radius: 50%!important;
+  transition: 300ms!important;
+}
+.carrinho-cor:hover{
+  transition: 300ms;
+  background-color: #8DAC55 !important;
+  border-radius: 50%!important;
 }

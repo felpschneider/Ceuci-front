@@ -57,8 +57,9 @@ function ModalProduto() {
       return (
         <div>
           <Button
-            variant="outlined"
+            variant="contained"
             className="botao btn"
+            size="large"
             onClick={handleOpen}>Novo produto</Button>
           <Modal
             open={open}

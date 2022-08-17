@@ -11,3 +11,41 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+/* Cores globais */
+
+:root{
+  --cor-principal: #5C874D;
+  --cor-branca: #fdfaf2;
+}
+
+/* Cores globais - fim */
+
+/* Scroll-bar */
+
+/* Firefox */
+* {
+  scrollbar-width: auto;
+  scrollbar-color:#A5B452 var(--cor-branca);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 18px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--cor-branca);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #A5B452;
+  border-radius: 10px;
+  border: 1px solid var(--cor-branca);
+}
+
+body::-webkit-scrollbar{
+  background-color: var(--cor-branca);
+}
+
+/* Scroll-bar - fim */

@@ -1,35 +1,3 @@
-:root{
-    --cor-principal: #5C874D;
-    --cor-branca: #f5faf5;
-}
-
- /* Firefox */
- * {
-    scrollbar-width: auto;
-    scrollbar-color:#528240 var(--cor-branca);
-  }
-
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
-    width: 18px;
-  }
-
-  *::-webkit-scrollbar-track {
-    background: var(--cor-branca);
-  }
-
-  *::-webkit-scrollbar-thumb {
-    background-color: #528240;
-    border-radius: 10px;
-    border: 1px solid var(--cor-branca);
-  }
-
-body::-webkit-scrollbar{
-    background-color: var(--cor-branca);
-}
-
-
-
 .text-decorator-none{
     text-decoration: none;
 }

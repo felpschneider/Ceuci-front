@@ -8,6 +8,7 @@ import {
   Typography,
   CardActionArea,
   CardMedia,
+  Grid,
 } from "@mui/material";
 import "./ListaProduto.css";
 import Produto from "../../../models/Produto";
@@ -48,128 +49,258 @@ function ListaProduto() {
 
   const classes = useStyles();
 
-  return (
-    <>
-      <Box
+  var produtoComponent;
+
+  if (token !== "") {
+    produtoComponent = (
+      <Grid
+        container
         display="flex"
-        gap="30px"
         justifyContent="center"
         alignItems="center"
-        flexDirection="row"
-        flexWrap="wrap"
       >
-        {produto.map((produto) => (
+        <Box
+          display="flex"
+          gap="30px"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="row"
+          flexWrap="wrap"
+        >
+          {produto.map((produto) => (
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  className={classes.media}
+                  image={produto.foto}
+                  title="foto do produto"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    {produto.nome}
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
+                  >
+                    {produto.descricao}
+                  </Typography>
+                  <Typography variant="h6" color="initial"></Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Box display="flex" justifyContent="center" mb={1.5}>
+                  <Link
+                    to={`/cadastroProduto/${produto.id}`}
+                    className="text-decorator-none"
+                  >
+                    <Box mx={1} justifyContent="center">
+                      <Button
+                        variant="contained"
+                        className="marginLeft botao"
+                        size="small"
+                        color="primary"
+                      >
+                        atualizar
+                      </Button>
+                    </Box>
+                  </Link>
+                  <Link
+                    to={`/deletarProduto/${produto.id}`}
+                    className="text-decorator-none"
+                  >
+                    <Box mx={1}>
+                      <Button
+                        variant="contained"
+                        size="small"
+                        color="secondary"
+                        className="botao-deletar"
+                      >
+                        deletar
+                      </Button>
+                    </Box>
+                  </Link>
+                </Box>
+              </CardActions>
+            </Card>
+          ))}
+        </Box>
+      </Grid>
+    );
+  } else {
+    produtoComponent = (
+      <Grid
+        container
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <Box
+          display="flex"
+          gap="30px"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="row"
+          flexWrap="wrap"
+        >
           <Card className={classes.root}>
             <CardActionArea>
               <CardMedia
                 component="img"
                 className={classes.media}
-                image={produto.foto}
+                // image={produto.foto}
                 title="foto do produto"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  {produto.nome}
+                  {/* {produto.nome} */}
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  {produto.descricao}
+                  {/* {produto.descricao} */}
                 </Typography>
                 <Typography variant="h6" color="initial"></Typography>
               </CardContent>
             </CardActionArea>
             <CardActions>
               <Box display="flex" justifyContent="center" mb={1.5}>
-                <Link
-                  to={`/cadastroProduto/${produto.id}`}
-                  className="text-decorator-none"
-                >
-                  <Box mx={1} justifyContent="center">
-                    <Button
-                      variant="contained"
-                      className="marginLeft botao"
-                      size="small"
-                      color="primary"
-                    >
-                      atualizar
-                    </Button>
-                  </Box>
-                </Link>
-                <Link
-                  to={`/deletarProduto/${produto.id}`}
-                  className="text-decorator-none"
-                >
-                  <Box mx={1}>
-                    <Button
-                      variant="contained"
-                      size="small"
-                      color="secondary"
-                      className="botao-deletar"
-                    >
-                      deletar
-                    </Button>
-                  </Box>
-                </Link>
+                <Box mx={1} justifyContent="center">
+                  <Button
+                    variant="contained"
+                    className="marginLeft botao"
+                    size="small"
+                    color="primary"
+                  >
+                    atualizar
+                  </Button>
+                </Box>
+
+                <Box mx={1}>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    color="secondary"
+                    className="botao-deletar"
+                  >
+                    deletar
+                  </Button>
+                </Box>
               </Box>
             </CardActions>
           </Card>
-        ))}
-      </Box>
-    </>
-  );
+        </Box>
+
+        <Box
+          display="flex"
+          gap="30px"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="row"
+          flexWrap="wrap"
+        >
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                className={classes.media}
+                // image={produto.foto}
+                title="foto do produto"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {/* {produto.nome} */}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {/* {produto.descricao} */}
+                </Typography>
+                <Typography variant="h6" color="initial"></Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Box display="flex" justifyContent="center" mb={1.5}>
+                <Box mx={1} justifyContent="center">
+                  <Button
+                    variant="contained"
+                    className="marginLeft botao"
+                    size="small"
+                    color="primary"
+                  >
+                    atualizar
+                  </Button>
+                </Box>
+
+                <Box mx={1}>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    color="secondary"
+                    className="botao-deletar"
+                  >
+                    deletar
+                  </Button>
+                </Box>
+              </Box>
+            </CardActions>
+          </Card>
+        </Box>
+        <Box
+          display="flex"
+          gap="30px"
+          justifyContent="center"
+          alignItems="center"
+          flexDirection="row"
+          flexWrap="wrap"
+        >
+          <Card className={classes.root}>
+            <CardActionArea>
+              <CardMedia
+                component="img"
+                className={classes.media}
+                // image={produto.foto}
+                title="foto do produto"
+              />
+              <CardContent>
+                <Typography gutterBottom variant="h5" component="h2">
+                  {/* {produto.nome} */}
+                </Typography>
+                <Typography variant="body2" color="textSecondary" component="p">
+                  {/* {produto.descricao} */}
+                </Typography>
+                <Typography variant="h6" color="initial"></Typography>
+              </CardContent>
+            </CardActionArea>
+            <CardActions>
+              <Box display="flex" justifyContent="center" mb={1.5}>
+                <Box mx={1} justifyContent="center">
+                  <Button
+                    variant="contained"
+                    className="marginLeft botao"
+                    size="small"
+                    color="primary"
+                  >
+                    atualizar
+                  </Button>
+                </Box>
+
+                <Box mx={1}>
+                  <Button
+                    variant="contained"
+                    size="small"
+                    color="secondary"
+                    className="botao-deletar"
+                  >
+                    deletar
+                  </Button>
+                </Box>
+              </Box>
+            </CardActions>
+          </Card>
+        </Box>
+      </Grid>
+    );
+  }
+  return <>{produtoComponent}</>;
 }
-//   return (
-//     <>
-//       {produto.map((produto) => (
-//         <Box m={2}>
-//           <Card variant="outlined">
-//             <CardContent>
-//               <Typography color="textSecondary" gutterBottom>
-//                 produtos
-//               </Typography>
-//               <Typography variant="h5" component="h2">
-//                 {produto.nome}
-//               </Typography>
-//               <Typography variant="body2" component="p">
-//                 {produto.descricao}
-//               </Typography>
-//               <Typography variant="body2" component="p">
-//                 {produto.categoria?.tipo}
-//               </Typography>
-//             </CardContent>
-//             <CardActions>
-//               <Box display="flex" justifyContent="center" mb={1.5}>
-//                 <Link
-//                   to={`/cadastroProduto/${produto.id}`}
-//                   className="text-decorator-none"
-//                 >
-//                   <Box mx={1}>
-//                     <Button
-//                       variant="contained"
-//                       className="marginLeft"
-//                       size="small"
-//                       color="primary"
-//                     >
-//                       atualizar
-//                     </Button>
-//                   </Box>
-//                 </Link>
-//                 <Link
-//                   to={`/deletarProduto/${produto.id}`}
-//                   className="text-decorator-none"
-//                 >
-//                   <Box mx={1}>
-//                     <Button variant="contained" size="small" color="secondary">
-//                       deletar
-//                     </Button>
-//                   </Box>
-//                 </Link>
-//               </Box>
-//             </CardActions>
-//           </Card>
-//         </Box>
-//       ))}
-//     </>
-//   );
-// }
 
 export default ListaProduto;
