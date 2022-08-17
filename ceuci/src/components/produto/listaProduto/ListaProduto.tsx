@@ -150,15 +150,15 @@ function ListaProduto() {
               <CardMedia
                 component="img"
                 className={classes.media}
-                // image={produto.foto}
+                image={ "https://i.imgur.com/lOwWsFs.png" }
                 title="foto do produto"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  {/* {produto.nome} */}
+                  Cesta Gaia
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  {/* {produto.descricao} */}
+                Cesta pequena com diversos tipos de hortaliças.
                 </Typography>
                 <Typography variant="h6" color="initial"></Typography>
               </CardContent>
@@ -172,18 +172,7 @@ function ListaProduto() {
                     size="small"
                     color="primary"
                   >
-                    atualizar
-                  </Button>
-                </Box>
-
-                <Box mx={1}>
-                  <Button
-                    variant="contained"
-                    size="small"
-                    color="secondary"
-                    className="botao-deletar"
-                  >
-                    deletar
+                    Comprar
                   </Button>
                 </Box>
               </Box>
@@ -204,15 +193,15 @@ function ListaProduto() {
               <CardMedia
                 component="img"
                 className={classes.media}
-                // image={produto.foto}
+                image={ "https://i.imgur.com/QMRdWqY.png" }
                 title="foto do produto"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  {/* {produto.nome} */}
+                  Cesta Freya
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  {/* {produto.descricao} */}
+                Cesta média com diversos tipos de hortaliças.
                 </Typography>
                 <Typography variant="h6" color="initial"></Typography>
               </CardContent>
@@ -226,20 +215,10 @@ function ListaProduto() {
                     size="small"
                     color="primary"
                   >
-                    atualizar
+                    Comprar
                   </Button>
                 </Box>
 
-                <Box mx={1}>
-                  <Button
-                    variant="contained"
-                    size="small"
-                    color="secondary"
-                    className="botao-deletar"
-                  >
-                    deletar
-                  </Button>
-                </Box>
               </Box>
             </CardActions>
           </Card>
@@ -257,15 +236,15 @@ function ListaProduto() {
               <CardMedia
                 component="img"
                 className={classes.media}
-                // image={produto.foto}
+                image={ "https://i.imgur.com/93JbH4U.png" }
                 title="foto do produto"
               />
               <CardContent>
                 <Typography gutterBottom variant="h5" component="h2">
-                  {/* {produto.nome} */}
+                  Cesta Ceuci
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                  {/* {produto.descricao} */}
+                Cesta grande com diversos tipos de hortaliças.
                 </Typography>
                 <Typography variant="h6" color="initial"></Typography>
               </CardContent>
@@ -279,18 +258,7 @@ function ListaProduto() {
                     size="small"
                     color="primary"
                   >
-                    atualizar
-                  </Button>
-                </Box>
-
-                <Box mx={1}>
-                  <Button
-                    variant="contained"
-                    size="small"
-                    color="secondary"
-                    className="botao-deletar"
-                  >
-                    deletar
+                    Comprar
                   </Button>
                 </Box>
               </Box>
