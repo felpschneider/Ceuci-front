@@ -82,11 +82,13 @@ function Navbar() {
                   </Typography>
                 </Box>
               </Link>
+              <Link to="/contato" className="text-decorator-none">
               <Box mx={1} className="cursor">
                 <Typography variant="h5" color="inherit">
                   Contato
-                </Typography>
-              </Box>
+                  </Typography>
+                </Box>
+                </Link>
             </Box>
             <Box display="flex" justifyContent="center" alignItems="center">
               <Box mx={1} className="cursor flex-display" onClick={goLogout}>
@@ -149,11 +151,13 @@ function Navbar() {
                   </Typography>
                 </Box>
               </Link>
+              <Link to="/contato" className="text-decorator-none">
               <Box mx={1} className="cursor">
                 <Typography variant="h5" color="inherit">
                   Contato
-                </Typography>
-              </Box>
+                  </Typography>
+                </Box>
+                </Link>
             </Box>
             <Box display="flex" justifyContent="center" alignItems="center">
               <Link to="/login" className="text-decorator-none">

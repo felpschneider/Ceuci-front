@@ -73,7 +73,7 @@ function ListaProduto() {
                 <CardMedia
                   component="img"
                   className={classes.media}
-                  image={produto.foto}
+                  src={produto.foto}
                   title="foto do produto"
                 />
                 <CardContent>
@@ -100,7 +100,7 @@ function ListaProduto() {
                       <Button
                         variant="contained"
                         className="marginLeft botao"
-                        size="small"
+                        size="large"
                         color="primary"
                       >
                         atualizar
@@ -114,7 +114,7 @@ function ListaProduto() {
                     <Box mx={1}>
                       <Button
                         variant="contained"
-                        size="small"
+                        size="large"
                         color="secondary"
                         className="botao-deletar"
                       >
@@ -136,50 +136,56 @@ function ListaProduto() {
         display="flex"
         justifyContent="center"
         alignItems="center"
+        direction="row"
       >
-        <Box
-          display="flex"
-          gap="30px"
-          justifyContent="center"
-          alignItems="center"
-          flexDirection="row"
-          flexWrap="wrap"
-        >
-          <Card className={classes.root}>
-            <CardActionArea>
-              <CardMedia
-                component="img"
-                className={classes.media}
-                image={ "https://i.imgur.com/lOwWsFs.png" }
-                title="foto do produto"
-              />
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Cesta Gaia
-                </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                Cesta pequena com diversos tipos de hortaliças.
-                </Typography>
-                <Typography variant="h6" color="initial"></Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Box display="flex" justifyContent="center" mb={1.5}>
-                <Box mx={1} justifyContent="center">
-                  <Button
-                    variant="contained"
-                    className="marginLeft botao"
-                    size="small"
-                    color="primary"
+        <Grid display="flex" justifyContent="center" alignItems="center">
+          <Box
+            display="flex"
+            gap="30px"
+            justifyContent="center"
+            alignItems="center"
+            flexDirection="row"
+            flexWrap="wrap"
+          >
+            <Card className={classes.root}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  className={classes.media}
+                  src="https://i.imgur.com/lOwWsFs.png"
+                  title="foto do produto"
+                />
+                <CardContent>
+                  <Typography gutterBottom variant="h5" component="h2">
+                    Cesta Gaia
+                  </Typography>
+                  <Typography
+                    variant="body2"
+                    color="textSecondary"
+                    component="p"
                   >
-                    Comprar
-                  </Button>
+                    Cesta pequena com diversos tipos de hortaliças.
+                  </Typography>
+                  <Typography variant="h6" color="initial"></Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <Box display="flex" justifyContent="center" mb={1.5}>
+                  <Box mx={1} justifyContent="center">
+                    <Button
+                      variant="contained"
+                      className="marginLeft botao-comprar"
+                      size="large"
+                      color="primary"
+                    >
+                      Comprar
+                    </Button>
+                  </Box>
                 </Box>
-              </Box>
-            </CardActions>
-          </Card>
-        </Box>
-
+              </CardActions>
+            </Card>
+          </Box>
+        </Grid>
         <Box
           display="flex"
           gap="30px"
@@ -193,7 +199,7 @@ function ListaProduto() {
               <CardMedia
                 component="img"
                 className={classes.media}
-                image={ "https://i.imgur.com/QMRdWqY.png" }
+                src="https://i.imgur.com/QMRdWqY.png"
                 title="foto do produto"
               />
               <CardContent>
@@ -201,7 +207,7 @@ function ListaProduto() {
                   Cesta Freya
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                Cesta média com diversos tipos de hortaliças.
+                  Cesta média com diversos tipos de hortaliças.
                 </Typography>
                 <Typography variant="h6" color="initial"></Typography>
               </CardContent>
@@ -211,14 +217,13 @@ function ListaProduto() {
                 <Box mx={1} justifyContent="center">
                   <Button
                     variant="contained"
-                    className="marginLeft botao"
-                    size="small"
+                    className="marginLeft botao-comprar"
+                    size="large"
                     color="primary"
                   >
                     Comprar
                   </Button>
                 </Box>
-
               </Box>
             </CardActions>
           </Card>
@@ -236,7 +241,7 @@ function ListaProduto() {
               <CardMedia
                 component="img"
                 className={classes.media}
-                image={ "https://i.imgur.com/93JbH4U.png" }
+                src="https://i.imgur.com/93JbH4U.png"
                 title="foto do produto"
               />
               <CardContent>
@@ -244,7 +249,7 @@ function ListaProduto() {
                   Cesta Ceuci
                 </Typography>
                 <Typography variant="body2" color="textSecondary" component="p">
-                Cesta grande com diversos tipos de hortaliças.
+                  Cesta grande com diversos tipos de hortaliças.
                 </Typography>
                 <Typography variant="h6" color="initial"></Typography>
               </CardContent>
@@ -254,8 +259,8 @@ function ListaProduto() {
                 <Box mx={1} justifyContent="center">
                   <Button
                     variant="contained"
-                    className="marginLeft botao"
-                    size="small"
+                    className="marginLeft botao-comprar"
+                    size="large"
                     color="primary"
                   >
                     Comprar

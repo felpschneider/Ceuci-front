@@ -6,6 +6,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
+import ModalCategoria from "../../components/categoria/modalCategoria/ModalCategoria";
 
 function Home() {
   let navigate = useNavigate();
@@ -60,12 +61,9 @@ function Home() {
               marginTop={1}
             >
               <Box marginTop={1}>
-                <Link to={"/cadastroCategoria"} className="text-decorator-none">
-                  <Button variant="contained" className="botao" size="large">
-                    Nova categoria
-                  </Button>
-                </Link>
+                <ModalCategoria/>
               </Box>
+
               <Box marginTop={1}>
                 <ModalProduto />
               </Box>

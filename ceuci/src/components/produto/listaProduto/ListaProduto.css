@@ -14,7 +14,7 @@
     align-items: center;
 }
 
-.botao{
+.botao-comprar{
   border-color: #fdfaf2 !important;
   background-color: #8da026 !important;
   color: #fdfaf2 !important;
@@ -22,12 +22,4 @@
   align-items: center;
   border-radius: 20px !important;
 }
-.botao:hover {
-  border-color: #fdfaf2 !important;
-  background-color: #8da026 !important;
-  color: #fdfaf2 !important;
-  display: flex;
-  align-items: center;
-  border-radius: 20px;
-  transition: 300ms;
-}
+

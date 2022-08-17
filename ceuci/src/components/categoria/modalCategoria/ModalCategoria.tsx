@@ -3,8 +3,8 @@ import { makeStyles, Theme, createStyles } from "@material-ui/core/styles";
 import Modal from "@mui/material/Modal";
 import { Button, Box } from "@mui/material";
 import CloseIcon from "@material-ui/icons/Close";
-import "./ModalProduto.css";
-import ProdutoPost from "../produtoPost/ProdutoPost";
+import "./ModalCategoria.css";
+import CadastroCategoria from "../cadastroCategoria/CadastroCategoria";
 
 function getModalStyle() {
   const top = 50;
@@ -48,19 +48,18 @@ function ModalProduto() {
       <Box display="flex" justifyContent="flex-end" className="cursor">
         <CloseIcon onClick={handleClose} />
       </Box>
-
-      <ProdutoPost />
+      <CadastroCategoria />
     </div>
   );
   return (
-    <Box>
+    <>
       <Button
         variant="contained"
-        className="botao btn"
+        className="botao"
         size="large"
         onClick={handleOpen}
       >
-        Novo produto
+        Nova categoria
       </Button>
 
       <Modal
@@ -71,7 +70,7 @@ function ModalProduto() {
       >
         {body}
       </Modal>
-    </Box>
+    </>
   );
 }
 export default ModalProduto;

@@ -1,5 +1,12 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
-import { Container, Typography, TextField, Button } from "@material-ui/core";
+import {
+  Container,
+  Typography,
+  TextField,
+  Button,
+  Grid,
+  Box,
+} from "@material-ui/core";
 import { useNavigate, useParams } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
 import { buscaId, post, put } from "../../../services/Service";
@@ -20,7 +27,7 @@ function CadastroCategoria() {
 
   useEffect(() => {
     if (token == "") {
-      toast.info('Você precisa estar logado!', {
+      toast.info("Você precisa estar logado!", {
         position: "top-right",
         autoClose: 2500,
         hideProgressBar: false,
@@ -28,7 +35,7 @@ function CadastroCategoria() {
         pauseOnHover: false,
         draggable: true,
         progress: undefined,
-        });
+      });
       navigate("/login");
     }
   }, [token]);
@@ -45,14 +52,14 @@ function CadastroCategoria() {
         Authorization: token,
       },
     });
-    }
-    // async function findByTipo(tipo: string) {
-    //     buscaId(`/categorias/tipo/${tipo}`, setCategoria, {
-    //       headers: {
-    //         Authorization: token,
-    //       },
-    //     });
-    //   }
+  }
+  // async function findByTipo(tipo: string) {
+  //     buscaId(`/categorias/tipo/${tipo}`, setCategoria, {
+  //       headers: {
+  //         Authorization: token,
+  //       },
+  //     });
+  //   }
 
   function updatedCategoria(e: ChangeEvent<HTMLInputElement>) {
     setCategoria({
@@ -72,7 +79,7 @@ function CadastroCategoria() {
           Authorization: token,
         },
       });
-      toast.success('Categoria atualizada com sucesso!', {
+      toast.success("Categoria atualizada com sucesso!", {
         position: "top-right",
         autoClose: 2500,
         hideProgressBar: false,
@@ -80,14 +87,14 @@ function CadastroCategoria() {
         pauseOnHover: false,
         draggable: true,
         progress: undefined,
-        });
+      });
     } else {
       post(`/categorias`, categoria, setCategoria, {
         headers: {
           Authorization: token,
         },
       });
-      toast.success('Categoria cadastrada com sucesso!', {
+      toast.success("Categoria cadastrada com sucesso!", {
         position: "top-right",
         autoClose: 2500,
         hideProgressBar: false,
@@ -95,7 +102,7 @@ function CadastroCategoria() {
         pauseOnHover: false,
         draggable: true,
         progress: undefined,
-        });
+      });
     }
     back();
   }
@@ -115,19 +122,27 @@ function CadastroCategoria() {
         >
           Cadastrar categoria
         </Typography>
-        <TextField
-          value={categoria.tipo}
-          onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
-          id="tipo"
-          label="tipo"
-          variant="outlined"
-          name="tipo"
-          margin="normal"
-          fullWidth
-        />
-        <Button type="submit" variant="contained" color="primary">
-          Finalizar
-        </Button>
+        <Box paddingY={3}>
+          <TextField
+            value={categoria.tipo}
+            onChange={(e: ChangeEvent<HTMLInputElement>) => updatedCategoria(e)}
+            id="tipo"
+            label="Tipo do produto"
+            variant="outlined"
+            name="tipo"
+            fullWidth
+          />
+        </Box>
+        <Box display="flex" justifyContent="center" alignItems="center" paddingBottom={2}>
+          <Button
+            type="submit"
+            variant="contained"
+            color="primary"
+            className="botao"
+          >
+            Finalizar
+          </Button>
+        </Box>
       </form>
     </Container>
   );
