@@ -175,7 +175,7 @@ function Navbar() {
               <Box className="">
                 <Button variant="contained" className="cursor flex-display text-decorator-none carrinho-cor">
                   <img
-                    src="https://cdn-icons.flaticon.com/png/512/2543/premium/2543378.png?token=exp=1660741737~hmac=d0e2ae800bb22ae5304b54cb06427416"
+                    src="https://i.imgur.com/1zzq2N9.png"
                     alt="Carrinho logo"
                     className="carrinho"
                   />
