@@ -56,9 +56,9 @@ function ListaCategoria() {
                   <Box mx={1}>
                     <Button
                       variant="contained"
-                      className="marginLeft"
+                      className="corBotao"
                       size="small"
-                      color="primary"
+
                     >
                       atualizar
                     </Button>
@@ -69,7 +69,7 @@ function ListaCategoria() {
                   className="text-decorator-none"
                 >
                   <Box mx={1}>
-                    <Button variant="contained" size="small" color="secondary">
+                    <Button variant="contained" size="small" className="corBotao01">
                       deletar
                     </Button>
                   </Box>

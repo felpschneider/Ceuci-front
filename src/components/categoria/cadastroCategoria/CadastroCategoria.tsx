@@ -5,7 +5,7 @@ import {
   TextField,
   Button,
   Grid,
-  Box,
+  
 } from "@material-ui/core";
 import { useNavigate, useParams } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
@@ -13,6 +13,7 @@ import { buscaId, post, put } from "../../../services/Service";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
+import { Box } from "@mui/material";
 
 function CadastroCategoria() {
   let navigate = useNavigate();
