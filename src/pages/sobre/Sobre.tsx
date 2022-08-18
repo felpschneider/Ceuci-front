@@ -1,7 +1,9 @@
 import React from "react";
-import LinkedIn from "@material-ui/icons/LinkedIn";
-import { GitHub } from "@material-ui/icons";
-import { Box, Grid, Typography } from "@mui/material";
+import LinkedIn from "@mui/icons-material/LinkedIn";
+// import GitHub from "@mui/icons-material/Github";
+import Box from "@mui/material/Box";
+import Grid from "@mui/material/Grid";
+import Typography from "@mui/material/Typography";
 import "./Sobre.css";
 
 function Sobre() {

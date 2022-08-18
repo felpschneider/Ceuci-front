@@ -17,7 +17,7 @@ import { Box } from "@mui/material";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
-import makeStyles from "@material-ui/core/styles/makeStyles";
+import makeStyles from "@mui/material/styles/makeStyles";
 
 function ListaProduto() {
   const [produto, setProduto] = useState<Produto[]>([]);
@@ -38,16 +38,16 @@ function ListaProduto() {
     getProduto();
   }, [produto.length]);
 
-  const useStyles = makeStyles({
-    root: {
-      maxWidth: 345,
-    },
-    media: {
-      height: 180,
-    },
-  });
+  // const useStyles = makeStyles({
+  //   root: {
+  //     maxWidth: 345,
+  //   },
+  //   media: {
+  //     height: 180,
+  //   },
+  // });
 
-  const classes = useStyles();
+  // const classes = useStyles();
 
   var produtoComponent;
 
@@ -68,11 +68,12 @@ function ListaProduto() {
           flexWrap="wrap"
         >
           {produto.map((produto) => (
-            <Card className={classes.root}>
+            // <Card className={classes.root}>
+            <Card>
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  className={classes.media}
+                  // className={classes.media}
                   src={produto.foto}
                   title="foto do produto"
                 />
@@ -147,11 +148,12 @@ function ListaProduto() {
             flexDirection="row"
             flexWrap="wrap"
           >
-            <Card className={classes.root}>
+            {/* <Card className={classes.root}> */}
+            <Card>
               <CardActionArea>
                 <CardMedia
                   component="img"
-                  className={classes.media}
+                  // className={classes.media}
                   src="https://i.imgur.com/lOwWsFs.png"
                   title="foto do produto"
                 />
@@ -194,11 +196,12 @@ function ListaProduto() {
           flexDirection="row"
           flexWrap="wrap"
         >
-          <Card className={classes.root}>
+          {/* <Card className={classes.root}> */}
+          <Card>
             <CardActionArea>
               <CardMedia
                 component="img"
-                className={classes.media}
+                // className={classes.media}
                 src="https://i.imgur.com/QMRdWqY.png"
                 title="foto do produto"
               />
@@ -236,11 +239,12 @@ function ListaProduto() {
           flexDirection="row"
           flexWrap="wrap"
         >
-          <Card className={classes.root}>
+          {/* <Card className={classes.root}> */}
+          <Card>
             <CardActionArea>
               <CardMedia
                 component="img"
-                className={classes.media}
+                // className={classes.media}
                 src="https://i.imgur.com/93JbH4U.png"
                 title="foto do produto"
               />
