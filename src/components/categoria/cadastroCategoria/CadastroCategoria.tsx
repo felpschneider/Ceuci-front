@@ -4,9 +4,8 @@ import {
   Typography,
   TextField,
   Button,
-  Grid,
   Box,
-} from "@material-ui/core";
+} from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
 import { buscaId, post, put } from "../../../services/Service";
