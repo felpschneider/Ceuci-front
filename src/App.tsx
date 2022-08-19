@@ -35,18 +35,14 @@ function App() {
             <Route path="/contato" element={<Contato />} />
             <Route path="/produtos" element={<ListaProduto />} />
             <Route path="/categorias" element={<ListaCategoria />} />
+
             <Route path="/cadastroProduto" element={<ProdutoPost />} />
             <Route path="/cadastroProduto/:id" element={<ProdutoPost />} />
             <Route path="/deletarProduto/:id" element={<DeletarProduto />} />
-            <Route
-              path="/deletarCategorias/:id"
-              element={<DeletarCategoria />}
-            />
-            <Route
-              path="/cadastroCategoria/:id"
-              element={<CadastroCategoria />}
-            />
+            
             <Route path="/cadastroCategoria" element={<CadastroCategoria />} />
+            <Route path="/cadastroCategoria/:id" element={<CadastroCategoria />} />
+            <Route path="/deletarCategorias/:id" element={<DeletarCategoria />} />
           </Routes>
         </div>
         <Footer />
