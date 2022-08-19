@@ -1,5 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
-import { Grid, Typography, TextField, Button } from "@material-ui/core";
+import { Grid, Typography, TextField, Button } from "@mui/material";
 import useLocalStorage from "react-use-localstorage";
 import { Link, useNavigate } from "react-router-dom";
 import { Box } from "@mui/material";
@@ -23,8 +23,8 @@ function Login() {
   });
 
   useEffect(() => {
-      if (token !== "") {
-        dispatch(addToken(token));
+    if (token !== "") {
+      dispatch(addToken(token));
       navigate("/home");
     }
   }, [token]);
@@ -42,7 +42,7 @@ function Login() {
     try {
       await login(`/usuarios/logar`, userLogin, setToken);
 
-      toast.success('Usuário logado com sucesso!', {
+      toast.success("Usuário logado com sucesso!", {
         position: "top-right",
         autoClose: 2500,
         hideProgressBar: false,
@@ -50,9 +50,9 @@ function Login() {
         pauseOnHover: false,
         draggable: true,
         progress: undefined,
-        });
+      });
     } catch (error) {
-      toast.error('Dados inconsistentes. Erro ao logar!', {
+      toast.error("Dados inconsistentes. Erro ao logar!", {
         position: "top-right",
         autoClose: 2500,
         hideProgressBar: false,
@@ -60,7 +60,7 @@ function Login() {
         pauseOnHover: false,
         draggable: true,
         progress: undefined,
-        });
+      });
     }
   }
 

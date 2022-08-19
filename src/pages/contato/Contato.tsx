@@ -1,15 +1,12 @@
-import React from "react";
-import LinkedIn from "@material-ui/icons/LinkedIn";
-import { GitHub } from "@material-ui/icons";
+// import AirlineSeatIndividualSuiteIcon from "@mui/icons-material/git";
+import LinkedIn from "@mui/icons-material/LinkedIn";
 import { Box, Grid } from "@mui/material";
-import { makeStyles } from "@material-ui/core/styles";
-import Card from "@material-ui/core/Card";
-import CardActionArea from "@material-ui/core/CardActionArea";
-import CardActions from "@material-ui/core/CardActions";
-import CardContent from "@material-ui/core/CardContent";
-import CardMedia from "@material-ui/core/CardMedia";
-import Button from "@material-ui/core/Button";
-import Typography from "@material-ui/core/Typography";
+import Card from "@mui/material/Card";
+import CardActionArea from "@mui/material/CardActionArea";
+import CardActions from "@mui/material/CardActions";
+import CardContent from "@mui/material/CardContent";
+import CardMedia from "@mui/material/CardMedia";
+import Typography from "@mui/material/Typography";
 import "./Contato.css";
 
 function Contato() {
@@ -66,7 +63,9 @@ function Contato() {
                         href="https://github.com/beatrizramoss"
                         target="_blank"
                       >
-                        <GitHub style={{ fontSize: 50, color: "#000000" }} />
+                        {/* <AirlineSeatIndividualSuiteIcon
+                          style={{ fontSize: 50, color: "#000000" }}
+                        /> */}
                       </a>
                     </CardActions>
                   </Card>
@@ -106,7 +105,9 @@ function Contato() {
                         href="https://github.com/felpschneider"
                         target="_blank"
                       >
-                        <GitHub style={{ fontSize: 50, color: "#000000" }} />
+                        {/* <AirlineSeatIndividualSuiteIcon
+                          style={{ fontSize: 50, color: "#000000" }}
+                        /> */}
                       </a>
                     </CardActions>
                   </Card>
@@ -146,7 +147,9 @@ function Contato() {
                         href="https://github.com/Kamilla-Rocha"
                         target="_blank"
                       >
-                        <GitHub style={{ fontSize: 50, color: "#000000" }} />
+                        {/* <AirlineSeatIndividualSuiteIcon
+                          style={{ fontSize: 50, color: "#000000" }}
+                        /> */}
                       </a>
                     </CardActions>
                   </Card>
@@ -183,7 +186,9 @@ function Contato() {
                         <LinkedIn style={{ fontSize: 50, color: "#000000" }} />
                       </a>
                       <a href="https://github.com/leaoquara" target="_blank">
-                        <GitHub style={{ fontSize: 50, color: "#000000" }} />
+                        {/* <AirlineSeatIndividualSuiteIcon
+                          style={{ fontSize: 50, color: "#000000" }}
+                        /> */}
                       </a>
                     </CardActions>
                   </Card>
@@ -222,7 +227,9 @@ function Contato() {
                         <LinkedIn style={{ fontSize: 50, color: "#000000" }} />
                       </a>
                       <a href="https://github.com/TamiresSss" target="_blank">
-                        <GitHub style={{ fontSize: 50, color: "#000000" }} />
+                        {/* <AirlineSeatIndividualSuiteIcon
+                          style={{ fontSize: 50, color: "#000000" }}
+                        /> */}
                       </a>
                     </CardActions>
                   </Card>
@@ -262,7 +269,9 @@ function Contato() {
                         href="https://github.com/thabatadepaula"
                         target="_blank"
                       >
-                        <GitHub style={{ fontSize: 50, color: "#000000" }} />
+                        {/* <AirlineSeatIndividualSuiteIcon
+                          style={{ fontSize: 50, color: "#000000" }}
+                        /> */}
                       </a>
                     </CardActions>
                   </Card>
@@ -299,7 +308,9 @@ function Contato() {
                         <LinkedIn style={{ fontSize: 50, color: "#000000" }} />
                       </a>
                       <a href="https://github.com/milhoratti" target="_blank">
-                        <GitHub style={{ fontSize: 50, color: "#000000" }} />
+                        {/* <AirlineSeatIndividualSuiteIcon
+                          style={{ fontSize: 50, color: "#000000" }}
+                        /> */}
                       </a>
                     </CardActions>
                   </Card>

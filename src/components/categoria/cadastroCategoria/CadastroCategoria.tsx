@@ -1,12 +1,5 @@
 import React, { useState, useEffect, ChangeEvent } from "react";
-import {
-  Container,
-  Typography,
-  TextField,
-  Button,
-  Grid,
-  Box,
-} from "@material-ui/core";
+import { Container, Typography, TextField, Button, Box } from "@mui/material";
 import { useNavigate, useParams } from "react-router-dom";
 import Categoria from "../../../models/Categoria";
 import { buscaId, post, put } from "../../../services/Service";
@@ -15,7 +8,7 @@ import { TokenState } from "../../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
 
 function CadastroCategoria() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
   const { id } = useParams<{ id: string }>();
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
@@ -133,7 +126,12 @@ function CadastroCategoria() {
             fullWidth
           />
         </Box>
-        <Box display="flex" justifyContent="center" alignItems="center" paddingBottom={2}>
+        <Box
+          display="flex"
+          justifyContent="center"
+          alignItems="center"
+          paddingBottom={2}
+        >
           <Button
             type="submit"
             variant="contained"

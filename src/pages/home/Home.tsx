@@ -18,68 +18,56 @@ function Home() {
 
   if (token != "") {
     homeComponent = (
-      <Grid
-        container
-        direction="row"
-        justifyContent="center"
-        alignItems="center"
-        className="caixa"
-      >
+      <Grid container className="bg-img-produtora">
         <Grid
-          alignItems="center"
           item
-          xs={12}
-          className="bg-img-produtora fundo-produtora"
+          xs={6}
           height="100vh"
+          display="flex"
+          alignItems="flex-end"
+          justifyContent="flex-end"
+          
         >
-          <Box >
-            <Box paddingX={20}>
-              <Typography
-                variant="h3"
-                gutterBottom
-                color="textPrimary"
-                component="h3"
-                align="center"
-                className="titulo"
-              >
-                Seja bem-vinda, produtora!
-              </Typography>
-              <Typography variant="h5"
-                gutterBottom
-                color="textPrimary"
-                component="h5"
-                align="center"
-                className="subtitulo">
-                Esse espaço foi criado pra você.
-                </Typography>
+          <Box
+            paddingY={2}
+            display="flex"
+            flexDirection="column"
+            alignItems="center"
+          >
+            <Typography
+              variant="h3"
+              color="textPrimary"
+              component="h3"
+              className="titulo"
+            >
+              Seja bem-vinda, produtora!
+            </Typography>
+            <Typography
+              variant="h5"
+              color="textPrimary"
+              component="h5"
+              className="subtitulo"
+            >
+              Esse espaço foi criado para você.
+            </Typography>
+
+            <Box marginTop={1}>
+              <ModalCategoria />
             </Box>
 
-            <Box
-              display="flex"
-              flexDirection="column"
-              alignItems="center"
-              marginTop={1}
-            >
-              <Box marginTop={1}>
-                <ModalCategoria/>
-              </Box>
+            <Box marginTop={1}>
+              <ModalProduto />
+            </Box>
 
-              <Box marginTop={1}>
-                <ModalProduto />
-              </Box>
-
-              <Box marginTop={1}>
-                <Link to={"/produtos"} className="text-decorator-none">
-                  <Button variant="contained" className="botao" size="large">
-                    Ver Produtos
-                  </Button>
-                </Link>
-              </Box>
-              
+            <Box marginTop={1} marginBottom={13}>
+              <Link to={"/produtos"} className="text-decorator-none">
+                <Button variant="contained" className="botao" size="large">
+                  Ver Produtos
+                </Button>
+              </Link>
             </Box>
           </Box>
         </Grid>
-        <Grid item xs={6}></Grid>
       </Grid>
     );
   } else {
