@@ -17,7 +17,7 @@ function Sobre() {
         <Grid alignItems="center" item xs={12}>
           <Grid>
             <Typography variant="h4" color="primary" className="sobre-titulo">
-              ODS
+              Mulheres na Agricultura
             </Typography>
             <Box className="sobre">
               <Box>
@@ -26,16 +26,15 @@ function Sobre() {
                   color="inherit"
                   className="sobre-texto"
                 >
-                  A ODS foi essencial para conseguirmos construir a ideia base
-                  do nosso projeto, com base nela nós conseguimos construir o
-                  nosso projeto, que ira ajudar diversar produtoras a vender
-                  seus produtos.
+                 Segundo o IBGE, no Brasil, 19% dos estabelecimentos rurais têm mulheres como proprietárias e produtoras formais. 
+                 E de acordo com uma pesquisa da ONU, aproximadamente 14% dos  alimentos produzidos para consumo global é perdido 
+                 entre a colheita e o varejo a cada ano, responsável pela emissão de até 10% das emissões de gases com efeito estufa. 
                 </Typography>
               </Box>
               <Box>
                 <img
                   className="sobre-imagem1"
-                  src="https://i.imgur.com/atpUhc9.png"
+                  src="https://i.imgur.com/OXj9oqa.jpg"
                   alt="Foto"
                 />
               </Box>
@@ -46,28 +45,33 @@ function Sobre() {
         <Grid alignItems="center" item xs={12}>
           <Grid>
             <Typography variant="h4" color="primary" className="sobre-titulo">
-              Sobre nós
+              Igualdade de Gênero
             </Typography>
             <Box className="sobre">
               <Box>
                 <img
                   className="sobre-imagem2"
-                  src="https://i.imgur.com/OXj9oqa.jpg"
+                  src="https://i.imgur.com/atpUhc9.png"
                   alt="Foto"
                 />
               </Box>
 
               <Box>
                 <a className="sobre-texto">
-                  Ceuci é um projeto que busca ajudar as pequenas produtoras
-                  familiares que não tem a divulgação que merecem pelo seu
-                  trabalho, fazendo com que possam ter uma renda maior de forma
-                  eficaz.{" "}
+                O Objetivo de Desenvolvimento Sustentavel da ONU,
+                 5.b se trata da Igualdade de Genero e sugere "um aumento de uso de tecnologias de base, 
+                 em particular as tecnologias de informação e comunicação, 
+                 para promover o empoderamento das mulheres", pensando nisso
+                 sete desenvolvedores da ONG Generation criaram uma plataforma exclusiva para mulheres produtoras 
+                 venderem produtos de hortifruti e mercearia, cultivados por elas, afim de gerar renda e visbilidade 
+                 para um grupo que contribui e movimenta ativamente a agricultura.{" "}
                 </a>
               </Box>
             </Box>
           </Grid>
         </Grid>
+
+
       </Grid>
     </>
   );

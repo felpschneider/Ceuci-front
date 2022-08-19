@@ -8,20 +8,21 @@
     font-family: "Nixie One", cursive, Times, serif, Roboto !important;
     display: flex;
     padding: 50px 0 25 0;
-    font-size: 80px !important;
+    font-size: 60px !important;
     justify-content: center;
     align-items: center;
     color: #528240 !important;
     font-weight: bold;
+    margin-bottom: 50px;
 }
 
 .sobre-texto{
     font-family: "Nixie One", cursive, Times, serif, Roboto !important;
     margin-bottom: 20px !important;
-    font-weight: 500 !important;
+    font-weight: 400 !important;
     padding: 50px;
     display: flex;
-    font-size: 30px !important;
+    font-size: 25px !important;
     justify-content: center;
     align-items: center;
     font-weight: 600;
@@ -35,13 +36,13 @@
 
 .sobre-imagem1{
     display: flex;
-    height: 500px;
-    width: 750px;
+    height: 450px;
+    width: 700px;
 }
 
 .sobre-imagem2{
     display: flex;
-    height: 500px;
-    width: 750px;
-    padding: 50px;
+    height: 450px;
+    width: 700px;
+    
 }
