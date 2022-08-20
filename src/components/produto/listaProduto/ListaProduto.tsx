@@ -100,14 +100,11 @@ function ListaProduto() {
                 </CardActionArea>
                 <CardActions>
                   <Box display="flex" justifyContent="center" mb={1.5}>
-                    <Link
-                      to={`/cadastroProduto/${produto.id}`}
-                      className="text-decorator-none"
-                    >
+                    
                       <Box mx={1} justifyContent="center">
-                        <ModalAtualizar/>
+                        <ModalAtualizar productId={produto.id}/>
                       </Box>
-                    </Link>
+                   
                     <Link
                       to={`/deletarProduto/${produto.id}`}
                       className="text-decorator-none"

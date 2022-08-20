@@ -5,6 +5,11 @@ import { Button, Box } from "@mui/material";
 import CloseIcon from "@material-ui/icons/Close";
 import "./ModalAtualizar.css";
 import ProdutoPost from "../produtoPost/ProdutoPost";
+import AtualizaProduto from "../atualizaProduto/AtualizaProduto";
+
+interface MyProps {
+    productId: any;
+}
 
 function getModalStyle() {
     const top = 50;
@@ -30,7 +35,7 @@ const useStyles = makeStyles((theme: Theme) =>
     })
 );
 
-function ModalAtualizar() {
+function ModalAtualizar(props: MyProps) {
     const classes = useStyles();
     const [modalStyle] = React.useState(getModalStyle);
     const [open, setOpen] = React.useState(false);
@@ -49,13 +54,13 @@ function ModalAtualizar() {
                 <CloseIcon onClick={handleClose} />
             </Box>
 
-            <ProdutoPost />
+            <AtualizaProduto productId={props.productId} />
         </div>
     );
     return (
 
         <Box>
-            
+
             <Box>
                 <Button
                     variant="contained"
