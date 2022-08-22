@@ -148,3 +148,16 @@
   background-color: #fdfaf2;
   max-width: fit-content!important;
 }
+
+.mg-bot{
+  margin-bottom:20px;
+}
+
+.MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline {
+  border-color: #528240!important;
+  border-width: 2px;
+}
+
+.MuiFormLabel-root.Mui-focused {
+  color: #528240;
+}
