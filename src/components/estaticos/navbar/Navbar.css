@@ -1,14 +1,15 @@
 .menu-color {
   background: linear-gradient(
     36deg,
-    rgba(82, 130, 64, 1) 0%,
-    rgba(189, 206, 102, 1) 39%,
-    rgba(165, 180, 82, 1) 84%
+    #528240 0%,
+    #bdce66 39%,
+    #a5b452 84%
   );
 }
 
 .mg-between {
   padding: 0 3vw 0 0vw;
+  
 }
 
 .pointer {
@@ -16,6 +17,7 @@
 }
 
 .cursor {
+  
   cursor: pointer;
   color: var(--cor-branca);
   transition: transform 500ms !important;
@@ -57,7 +59,7 @@
 }
 
 .carrinho-cor{
-  background-color: rgba(165, 180, 82, 1)!important;
+  background-color: #a5b452!important;
   border-radius: 50%!important;
   transition: 300ms!important;
 }
