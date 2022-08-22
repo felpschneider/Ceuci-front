@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useEffect, useState } from 'react'
 import { Container, Typography, TextField, Button, Select, InputLabel, MenuItem, FormControl, FormHelperText } from "@material-ui/core"
 import './AtualizaProduto.css';
-import { useNavigate, useParams } from 'react-router-dom';
+import { Link, useNavigate, useParams } from 'react-router-dom';
 import Categoria from '../../../models/Categoria';
 import Produto from '../../../models/Produto';
 import { busca, buscaId, post, put } from '../../../services/Service';
@@ -10,16 +10,16 @@ import { TokenState } from '../../../store/tokens/tokensReducer';
 import { toast } from "react-toastify";
 import { Grid } from '@mui/material';
 
-interface MyProps{
-    productId:any;
+interface MyProps {
+    productId: any;
+    setOpen:any;
 }
+
 
 function AtualizaProduto(props: MyProps) {
 
     let navigate = useNavigate();
-    const id = props.productId;//useParams<{ id: string }>();
-
-    const [idTemp, setIdTemp] = useState('');
+    const id = props.productId;
     const [categorias, setCategorias] = useState<Categoria[]>([])
     const token = useSelector<TokenState, TokenState["tokens"]>(
         (state) => state.tokens
@@ -94,7 +94,7 @@ function AtualizaProduto(props: MyProps) {
                     'Authorization': token
                 }
             })
-            toast.success('Produto alterado com sucesso!', {
+            toast.success('Produto cadastrado com sucesso!', {
                 position: "top-right",
                 autoClose: 2500,
                 hideProgressBar: false,
@@ -102,7 +102,8 @@ function AtualizaProduto(props: MyProps) {
                 pauseOnHover: false,
                 draggable: true,
                 progress: undefined,
-            });
+                });
+                props.setOpen();
         } else {
             toast.error('Produto não encontrado', {
                 position: "top-right",
@@ -114,6 +115,7 @@ function AtualizaProduto(props: MyProps) {
                 progress: undefined,
             });
         }
+
     }
     return (
         <Grid container maxWidth="50vw" maxHeight="100vh" className="bg-cadastrar-produto">
@@ -201,10 +203,12 @@ function AtualizaProduto(props: MyProps) {
                     <FormHelperText>Escolha a categoria do produto</FormHelperText>
                     <Button type="submit" variant="contained" color="primary">
                         Finalizar
+                        
                     </Button>
                 </FormControl>
             </form>
         </Grid>
     );
 }
+
 export default AtualizaProduto;

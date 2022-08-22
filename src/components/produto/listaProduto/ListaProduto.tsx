@@ -17,12 +17,11 @@ import { busca } from "../../../services/Service";
 import { Box } from "@mui/material";
 import { useSelector } from "react-redux";
 import { TokenState } from "../../../store/tokens/tokensReducer";
-import { toast } from "react-toastify";
 import makeStyles from "@material-ui/core/styles/makeStyles";
-import Carousel from "../../produto/carousel/Carousel";
 import ModalAtualizar from "../modalatualizar/ModalAtualizar";
 
 function ListaProduto() {
+  
   const [produto, setProduto] = useState<Produto[]>([]);
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
@@ -41,6 +40,7 @@ function ListaProduto() {
     getProduto();
   }, [produto.length]);
 
+
   const useStyles = makeStyles({
     root: {
       maxWidth: 345,
@@ -55,20 +55,23 @@ function ListaProduto() {
   var produtoComponent;
 
 
-
   if (token !== "") {
+
+
+
     produtoComponent = <Grid
       className="topo"
       container
       display="flex"
       justifyContent="center"
       alignItems="center"
-    >< CarouselProduto isRTL={false}>
+
+    >< CarouselProduto isRTL={false} className="corcarrossel" >
         {
 
           produto.map(produto => (
             <>
-              <Box className="topo"
+              <Box 
                 display="flex"
                 gap="30px"
                 justifyContent="center"
@@ -76,15 +79,15 @@ function ListaProduto() {
                 flexDirection="row"
                 flexWrap="wrap"
               ></Box>
-              <Card className={classes.root}>
-                <CardActionArea>
+              <Card className={classes.root}  >
+                <CardActionArea   >
                   <CardMedia
                     component="img"
                     className={classes.media}
                     src={produto.foto}
                     title="foto do produto"
                   />
-                  <CardContent >
+                  <CardContent  >
                     <Typography gutterBottom variant="h5" component="h2">
                       {produto.nome}
                     </Typography>
@@ -100,11 +103,11 @@ function ListaProduto() {
                 </CardActionArea>
                 <CardActions>
                   <Box display="flex" justifyContent="center" mb={1.5}>
-                    
-                      <Box mx={1} justifyContent="center">
-                        <ModalAtualizar productId={produto.id}/>
-                      </Box>
-                   
+
+                    <Box mx={1} justifyContent="center">
+                      <ModalAtualizar productId={produto.id} />
+                    </Box>
+
                     <Link
                       to={`/deletarProduto/${produto.id}`}
                       className="text-decorator-none"
@@ -115,6 +118,7 @@ function ListaProduto() {
                           size="large"
                           color="secondary"
                           className="botao-deletar"
+
                         >
                           deletar
                         </Button>
@@ -182,7 +186,13 @@ function ListaProduto() {
   }
 
 
-  return <>{produtoComponent}</>;
+  return <>
+<h1 className="texto-ods">
+  
+  Produtos
+
+</h1>
+  {produtoComponent}</>;
 }
 
 export default ListaProduto;

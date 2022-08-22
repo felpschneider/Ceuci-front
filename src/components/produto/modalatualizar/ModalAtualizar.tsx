@@ -4,7 +4,6 @@ import Modal from "@mui/material/Modal";
 import { Button, Box } from "@mui/material";
 import CloseIcon from "@material-ui/icons/Close";
 import "./ModalAtualizar.css";
-import ProdutoPost from "../produtoPost/ProdutoPost";
 import AtualizaProduto from "../atualizaProduto/AtualizaProduto";
 
 interface MyProps {
@@ -46,6 +45,7 @@ function ModalAtualizar(props: MyProps) {
 
     const handleClose = () => {
         setOpen(false);
+
     };
 
     const body = (
@@ -54,7 +54,7 @@ function ModalAtualizar(props: MyProps) {
                 <CloseIcon onClick={handleClose} />
             </Box>
 
-            <AtualizaProduto productId={props.productId} />
+            <AtualizaProduto productId={props.productId} setOpen={handleClose}/>
         </div>
     );
     return (
