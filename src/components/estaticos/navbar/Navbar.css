@@ -53,16 +53,16 @@
 }
 
 .carrinho {
-  height: 30px;
+  font-size: 30px!important;
 }
 
 .carrinho-cor{
-  background-color: rgba(165, 180, 82, 1)!important;
-  border-radius: 50%!important;
+  background-color: #a5b452!important;
+  border-radius: 100px!important;
   transition: 300ms!important;
 }
 .carrinho-cor:hover{
   transition: 300ms;
   background-color: #8DAC55 !important;
-  border-radius: 50%!important;
+  border-radius: 150px!important;
 }

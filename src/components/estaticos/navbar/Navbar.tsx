@@ -6,6 +6,8 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToken } from "../../../store/tokens/actions";
 import { TokenState } from "../../../store/tokens/tokensReducer";
 import { toast } from "react-toastify";
+import ShoppingBagOutlinedIcon from '@mui/icons-material/ShoppingBagOutlined';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 function Navbar() {
   const token = useSelector<TokenState, TokenState["tokens"]>(
@@ -83,23 +85,19 @@ function Navbar() {
                 </Box>
               </Link>
               <Link to="/contato" className="text-decorator-none">
-              <Box mx={1} className="cursor">
-                <Typography variant="h5" color="inherit">
-                  Contato
+                <Box mx={1} className="cursor">
+                  <Typography variant="h5" color="inherit">
+                    Contato
                   </Typography>
                 </Box>
-                </Link>
+              </Link>
             </Box>
             <Box display="flex" justifyContent="center" alignItems="center">
               <Box mx={1} className="cursor flex-display" onClick={goLogout}>
                 <Typography variant="h5" color="inherit">
                   Sair
                 </Typography>
-                <img
-                  src="https://cdn-icons-png.flaticon.com/512/1286/1286853.png"
-                  alt=""
-                  className="icone-sair"
-                />
+                <ExitToAppIcon className="carrinho icone-sair" />
               </Box>
             </Box>
           </Grid>
@@ -152,33 +150,27 @@ function Navbar() {
                 </Box>
               </Link>
               <Link to="/contato" className="text-decorator-none">
-              <Box mx={1} className="cursor">
-                <Typography variant="h5" color="inherit">
-                  Contato
+                <Box mx={1} className="cursor">
+                  <Typography variant="h5" color="inherit">
+                    Contato
                   </Typography>
                 </Box>
-                </Link>
+              </Link>
             </Box>
             <Box display="flex" justifyContent="center" alignItems="center">
               <Link to="/login" className="text-decorator-none">
-                <Box mx={1} className="cursor flex-display">
-                  <Typography variant="h5" color="inherit">
+                <Box mx={1} className="cursor flex-display" marginRight={3}>
+                  <Typography variant="h5" color="inherit" >
                     Entrar
                   </Typography>
-                  <img
-                    src="https://cdn-icons.flaticon.com/png/512/4929/premium/4929629.png?token=exp=1660683734~hmac=3c01980673a03c3c382457a528286ae3"
-                    alt=""
-                    className="icone-sair"
-                  />
                 </Box>
               </Link>
               <Box className="">
-                <Button variant="contained" className="cursor flex-display text-decorator-none carrinho-cor">
-                  <img
-                    src="https://i.imgur.com/1zzq2N9.png"
-                    alt="Carrinho logo"
-                    className="carrinho"
-                  />
+                <Button
+                  variant="contained"
+                  className="cursor flex-display text-decorator-none carrinho-cor"
+                >
+                    <ShoppingBagOutlinedIcon className="carrinho"/>
                 </Button>
               </Box>
             </Box>
