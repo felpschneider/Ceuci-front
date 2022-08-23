@@ -60,7 +60,7 @@ function ListaProduto() {
 
 
     produtoComponent = <Grid
-      className="topo"
+      className="topo titulo"
       container
       display="flex"
       justifyContent="center"
