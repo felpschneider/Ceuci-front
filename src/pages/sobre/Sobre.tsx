@@ -61,18 +61,49 @@ function Sobre() {
                 O Objetivo de Desenvolvimento Sustentavel da ONU,
                  5.b se trata da Igualdade de Genero e sugere "um aumento de uso de tecnologias de base, 
                  em particular as tecnologias de informação e comunicação, 
-                 para promover o empoderamento das mulheres", pensando nisso
-                 sete desenvolvedores da ONG Generation criaram uma plataforma exclusiva para mulheres produtoras 
-                 venderem produtos de hortifruti e mercearia, cultivados por elas, afim de gerar renda e visbilidade 
-                 para um grupo que contribui e movimenta ativamente a agricultura.{" "}
+                 para promover o empoderamento das mulheres".
                 </a>
               </Box>
             </Box>
           </Grid>
         </Grid>
 
-
-      </Grid>
+        <Grid
+        direction="row"
+        alignItems="center"
+        justifyContent="center"
+        className="sobre-caixa"
+      >
+        <Grid alignItems="center" item xs={12}>
+          <Grid>
+            <Typography variant="h4" color="primary" className="sobre-titulo">
+              CEUCI
+            </Typography>
+            <Box className="sobre">
+              <Box>
+                <Typography
+                  variant="h4"
+                  color="inherit"
+                  className="sobre-texto"
+                >
+                 Pensando nisso
+                 sete desenvolvedores da ONG Generation criaram uma plataforma exclusiva para mulheres produtoras 
+                 comercializarem produtos de hortifruti e mercearia, cultivados por elas, afim de gerar renda e visbilidade 
+                 para um grupo que contribui e movimenta ativamente a agricultura. Com nome inspirado na deusa indígena protetora das moradias e da lavoura, nasce o projeto CEUCI.{" "}
+                </Typography>
+              </Box>
+              <Box>
+                <img
+                  className="sobre-imagem3"
+                  src="https://imgur.com/Gul7AoN.jpg"
+                  alt="Foto"
+                />
+              </Box>
+            </Box>
+          </Grid>
+        </Grid>
+                </Grid>
+    </Grid>
     </>
   );
 }
