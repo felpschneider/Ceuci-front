@@ -1,3 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Nixie+One&display=swap");
+
+.texto-ods {
+  font-family: "Nixie One", cursive, Times, serif, Roboto !important;
+  font-size: 30px !important;
+  font-weight: 600 !important;
+  color: black;
+  text-align: center;
+  
+
+}
+
 .text-decorator-none {
   text-decoration: none;
 }
@@ -21,5 +33,9 @@
   display: flex;
   align-items: center;
   border-radius: 20px !important;
+}
+
+.topo{
+  margin-top: 200px !important;
 }
 

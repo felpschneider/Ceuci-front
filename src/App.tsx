@@ -18,6 +18,8 @@ import store from "./store/store";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Contato from "./pages/contato/Contato";
+import AtualizaProduto from "./components/produto/atualizaProduto/AtualizaProduto";
+
 
 function App() {
   return (
