@@ -69,7 +69,12 @@ function ListaCategoria() {
                   className="text-decorator-none"
                 >
                   <Box mx={1}>
-                    <Button variant="contained" size="small" className="corBotao01">
+                    <Button
+                      variant="contained"
+                      size="small"
+                      className="corBotao01"
+                      color="primary"
+                    >
                       deletar
                     </Button>
                   </Box>

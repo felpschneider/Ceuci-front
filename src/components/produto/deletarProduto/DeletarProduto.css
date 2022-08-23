@@ -1,0 +1,8 @@
+.mg-right {
+  margin-right: 2rem;
+}
+.centralize {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
