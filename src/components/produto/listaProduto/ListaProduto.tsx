@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import CarouselProduto from 'react-elastic-carousel';
+import CarouselProduto from "react-elastic-carousel";
 import {
   Card,
   CardActions,
@@ -21,7 +21,6 @@ import makeStyles from "@material-ui/core/styles/makeStyles";
 import ModalAtualizar from "../modalAtualizar/ModalAtualizar";
 
 function ListaProduto() {
-  
   const [produto, setProduto] = useState<Produto[]>([]);
   const token = useSelector<TokenState, TokenState["tokens"]>(
     (state) => state.tokens
@@ -40,13 +39,12 @@ function ListaProduto() {
     getProduto();
   }, [produto.length]);
 
-
   const useStyles = makeStyles({
     root: {
-      maxWidth: 345,
+      maxWidth: 450,
     },
     media: {
-      height: 180,
+      height: 250,
     },
   });
 
@@ -54,24 +52,19 @@ function ListaProduto() {
 
   var produtoComponent;
 
-
   if (token !== "") {
-
-
-
-    produtoComponent = <Grid
-      className="topo titulo"
-      container
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-
-    >< CarouselProduto isRTL={false} className="corcarrossel" >
-        {
-
-          produto.map(produto => (
+    produtoComponent = (
+      <Grid
+        className="topo titulo"
+        container
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <CarouselProduto isRTL={false} itemsToShow={2} pagination={false}>
+          {produto.map((produto) => (
             <>
-              <Box 
+              <Box
                 display="flex"
                 gap="30px"
                 justifyContent="center"
@@ -79,15 +72,15 @@ function ListaProduto() {
                 flexDirection="row"
                 flexWrap="wrap"
               ></Box>
-              <Card className={classes.root}  >
-                <CardActionArea   >
+              <Card className={classes.root}>
+                <CardActionArea>
                   <CardMedia
                     component="img"
                     className={classes.media}
                     src={produto.foto}
                     title="foto do produto"
                   />
-                  <CardContent  >
+                  <CardContent>
                     <Typography gutterBottom variant="h5" component="h2">
                       {produto.nome}
                     </Typography>
@@ -101,9 +94,8 @@ function ListaProduto() {
                     <Typography variant="h6" color="initial"></Typography>
                   </CardContent>
                 </CardActionArea>
-                <CardActions>
+                <CardActions className="centralize">
                   <Box display="flex" justifyContent="center" mb={1.5}>
-
                     <Box mx={1} justifyContent="center">
                       <ModalAtualizar productId={produto.id} />
                     </Box>
@@ -118,81 +110,108 @@ function ListaProduto() {
                           size="large"
                           color="secondary"
                           className="botao-deletar"
-
                         >
-                          deletar
+                          Deletar
                         </Button>
                       </Box>
                     </Link>
+                    <Box
+                      display="flex"
+                      flexWrap="nowrap"
+                      flexDirection="column"
+                      justifyContent="center"
+                      mx={1}
+                    >
+                      <Typography variant="h6">R${produto.preco}</Typography>
+                    </Box>
                   </Box>
                 </CardActions>
               </Card>
             </>
-          ))
-        }
-      </CarouselProduto>
-    </Grid>
+          ))}
+        </CarouselProduto>
+      </Grid>
+    );
   } else {
-    produtoComponent = < CarouselProduto isRTL={false} className="topo">
-      {
-
-        produto.map(item => (
-          <>
-            <Box className="topo"
-              display="flex"
-              gap="30px"
-              justifyContent="center"
-              alignItems="center"
-              flexDirection="row"
-              flexWrap="wrap"
-            ></Box>
-            <Card className={classes.root}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  className={classes.media}
-                  src={item.foto}
-                  title="foto do produto"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="h2">
-                    {item.nome}
-                  </Typography>
-                  <Typography variant="body2" color="textSecondary" component="p">
-                    {item.descricao}
-                  </Typography>
-                  <Typography variant="h6" color="initial"></Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Box display="flex" justifyContent="center" mb={1.5}>
-                  <Box mx={1} justifyContent="center">
-                    <Button
-                      variant="contained"
-                      className="marginLeft botao-comprar"
-                      size="large"
-                      color="primary"
+    produtoComponent = (
+      <Grid
+        className="topo titulo"
+        container
+        display="flex"
+        justifyContent="center"
+        alignItems="center"
+      >
+        <CarouselProduto isRTL={false} itemsToShow={2} pagination={false}>
+          {produto.map((produto) => (
+            <>
+              <Box
+                display="flex"
+                gap="30px"
+                justifyContent="center"
+                alignItems="center"
+              ></Box>
+              <Card className={classes.root}>
+                <CardActionArea>
+                  <CardMedia
+                    component="img"
+                    className={classes.media}
+                    src={produto.foto}
+                    title="foto do produto"
+                  />
+                  <CardContent>
+                    <Typography gutterBottom variant="h5" component="h2">
+                      {produto.nome}
+                    </Typography>
+                    <Typography
+                      variant="body2"
+                      color="textSecondary"
+                      component="p"
                     >
-                      Comprar
-                    </Button>
+                      {produto.descricao}
+                    </Typography>
+                    <Typography variant="h6" color="initial"></Typography>
+                  </CardContent>
+                </CardActionArea>
+                <CardActions className="centralize">
+                  <Box display="flex" justifyContent="center" mb={1.5}>
+                    <Box mx={1}>
+                      <Button
+                        variant="contained"
+                        size="medium"
+                        className="botao"
+                      >
+                        Comprar
+                      </Button>
+                    </Box>
+
+                    <Box
+                      display="flex"
+                      flexWrap="nowrap"
+                      flexDirection="column"
+                      justifyContent="center"
+                      mx={1}
+                    >
+                      <Typography variant="h6">R${produto.preco}</Typography>
+                      <Typography fontSize="1rem" flexWrap="nowrap">
+                        Frete Grátis!
+                      </Typography>
+                    </Box>
                   </Box>
-                </Box>
-              </CardActions>
-            </Card>
-          </>
-        ))
-      }
-    </CarouselProduto>
+                </CardActions>
+              </Card>
+            </>
+          ))}
+        </CarouselProduto>
+      </Grid>
+    );
   }
 
-
-  return <>
-<h1 className="texto-ods">
-  
-  Produtos
-
-</h1>
-  {produtoComponent}</>;
+  return (
+    <>
+      <h1 className="texto-ods">Produtos</h1>
+      {produtoComponent}
+    </>
+  );
 }
 
 export default ListaProduto;

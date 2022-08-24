@@ -52,7 +52,7 @@ function CadastroUsuario() {
     if (confirmarSenha === user.senha && user.senha.length >= 8) {
       try {
         await cadastroUsuario(`/usuarios/cadastrar`, user, setUserResult);
-        toast.success('Usuário cadastrado com sucesso!', {
+        toast.success("Usuário cadastrado com sucesso!", {
           position: "top-right",
           autoClose: 2500,
           hideProgressBar: false,
@@ -60,11 +60,11 @@ function CadastroUsuario() {
           pauseOnHover: false,
           draggable: true,
           progress: undefined,
-          }); 
+        });
       } catch (error) {
         console.log(`Error: ${error}`);
 
-        toast.info('Usuário já existente!', {
+        toast.info("Usuário já existente!", {
           position: "top-right",
           autoClose: 2500,
           hideProgressBar: false,
@@ -72,10 +72,10 @@ function CadastroUsuario() {
           pauseOnHover: false,
           draggable: true,
           progress: undefined,
-          });
+        });
       }
     } else {
-      toast.info('Insira no miníno 8 caracteres na senha.', {
+      toast.info("Insira no miníno 8 caracteres na senha.", {
         position: "top-right",
         autoClose: 2500,
         hideProgressBar: false,
@@ -83,7 +83,7 @@ function CadastroUsuario() {
         pauseOnHover: false,
         draggable: true,
         progress: undefined,
-        });
+      });
 
       setUser({ ...user, senha: "" });
       setConfirmarSenha("");
@@ -91,93 +91,104 @@ function CadastroUsuario() {
   }
 
   return (
-    <Grid container direction="row" justifyContent="center" alignItems="center">
-      <Grid item xs={6} className="img2">
-        {" "}
-      </Grid>
-      <Grid item xs={6} alignItems="center">
-        <Box paddingX={20}>
-          <form onSubmit={cadastrar}>
-            <Typography
-              variant="h3"
-              gutterBottom
-              color="textPrimary"
-              component="h3"
-              align="center"
-              className="textos2"
-            >
-              Cadastrar
-            </Typography>
-            <TextField
-              value={user.nome}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              className="cor"
-              id="nome"
-              label="Nome"
-              variant="outlined"
-              name="nome"
-              margin="normal"
-              fullWidth
-            />
-            <TextField
-              value={user.usuario}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              className="cor"
-              id="usuario"
-              label="Usuário"
-              variant="outlined"
-              name="usuario"
-              margin="normal"
-              fullWidth
-            />
-            <TextField
-              value={user.senha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
-              className="cor"
-              id="senha"
-              label="Senha"
-              variant="outlined"
-              name="senha"
-              margin="normal"
-              type="password"
-              fullWidth
-            />
-            <TextField
-              value={confirmarSenha}
-              onChange={(e: ChangeEvent<HTMLInputElement>) =>
-                confirmarSenhaHandle(e)
-              }
-              className="cor"
-              id="confirmarSenha"
-              label="Confirme sua senha"
-              variant="outlined"
-              name="confirmarSenha"
-              margin="normal"
-              type="password"
-              fullWidth
-            />
-            <Box marginTop={2} textAlign="center">
-              <Link to="/login" className="text-decorator-none">
-                <Button
-                  variant="contained"
-                  color="secondary"
-                  className="bg-botao2"
-                >
-                  Cancelar
-                </Button>
-              </Link>
-
-              <Button
-                type="submit"
-                variant="contained"
-                color="primary"
-                className="bg-botao3"
+    <Grid
+      container
+      flexDirection="row"
+      justifyContent="center"
+      alignItems="center"
+    >
+      <Grid
+        item
+        xs={12}
+        className="img2"
+        display="flex"
+        justifyContent="flex-end"
+        alignItems="center"
+      >
+        <Grid item xs={6} alignItems="center">
+          <Box paddingX={20}>
+            <form onSubmit={cadastrar}>
+              <Typography
+                variant="h3"
+                gutterBottom
+                color="textPrimary"
+                component="h3"
+                align="center"
+                className="textos2"
               >
                 Cadastrar
-              </Button>
-            </Box>
-          </form>
-        </Box>
+              </Typography>
+              <TextField
+                value={user.nome}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                className="cor"
+                id="nome"
+                label="Nome"
+                variant="outlined"
+                name="nome"
+                margin="normal"
+                fullWidth
+              />
+              <TextField
+                value={user.usuario}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                className="cor"
+                id="usuario"
+                label="Usuário"
+                variant="outlined"
+                name="usuario"
+                margin="normal"
+                fullWidth
+              />
+              <TextField
+                value={user.senha}
+                onChange={(e: ChangeEvent<HTMLInputElement>) => updatedModel(e)}
+                className="cor"
+                id="senha"
+                label="Senha"
+                variant="outlined"
+                name="senha"
+                margin="normal"
+                type="password"
+                fullWidth
+              />
+              <TextField
+                value={confirmarSenha}
+                onChange={(e: ChangeEvent<HTMLInputElement>) =>
+                  confirmarSenhaHandle(e)
+                }
+                className="cor"
+                id="confirmarSenha"
+                label="Confirme sua senha"
+                variant="outlined"
+                name="confirmarSenha"
+                margin="normal"
+                type="password"
+                fullWidth
+              />
+              <Box marginTop={2} textAlign="center">
+                <Link to="/login" className="text-decorator-none">
+                  <Button
+                    variant="contained"
+                    color="secondary"
+                    className="bg-botao2"
+                  >
+                    Cancelar
+                  </Button>
+                </Link>
+
+                <Button
+                  type="submit"
+                  variant="contained"
+                  color="primary"
+                  className="bg-botao3"
+                >
+                  Cadastrar
+                </Button>
+              </Box>
+            </form>
+          </Box>
+        </Grid>
       </Grid>
     </Grid>
   );

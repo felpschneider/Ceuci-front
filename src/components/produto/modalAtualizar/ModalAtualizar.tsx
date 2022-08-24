@@ -59,12 +59,12 @@ function ModalAtualizar(props: MyProps) {
     );
     return (
 
-        <Box>
+        <Box >
 
             <Box>
                 <Button
                     variant="contained"
-                    className="botao btn"
+                    className="botao"
                     size="large"
                     onClick={handleOpen}
                 >

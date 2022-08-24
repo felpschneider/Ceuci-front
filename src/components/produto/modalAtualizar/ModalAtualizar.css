@@ -12,3 +12,7 @@
     background-color: #528240!important;
      color: white!important;
 }
+
+.MuiInput-underline:after{
+    border-bottom: 2px solid #528240!important;
+}

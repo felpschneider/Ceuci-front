@@ -201,7 +201,7 @@ function AtualizaProduto(props: MyProps) {
                         ))}
                     </Select>
                     <FormHelperText>Escolha a categoria do produto</FormHelperText>
-                    <Button type="submit" variant="contained" color="primary">
+                    <Button type="submit" variant="contained" color="primary" className="botao">
                         Finalizar
 
                     </Button>
